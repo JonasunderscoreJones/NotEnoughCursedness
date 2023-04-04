@@ -6,5 +6,7 @@
     "block.nec.green_birch_log": "Green Birch Log",
     "block.nec.gun_block": "Gun Block",
     "item.nec.dirt_sword": "Dirt Sword",
-    "itemGroup.nec.not_enough_cursedness": "Not Enough Cursedness"
+    "itemGroup.nec.not_enough_cursedness": "Not Enough Cursedness",
+
+    "block.minecraft.stone": "Rock"
 }
