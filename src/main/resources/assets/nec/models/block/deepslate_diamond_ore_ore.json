@@ -1,0 +1,6 @@
+{
+    "parent": "minecraft:block/cube_all",
+    "textures": {
+      "all": "nec:block/deepslate_diamond_ore_ore"
+    }
+  }
