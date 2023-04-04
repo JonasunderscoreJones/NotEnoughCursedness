@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "id": "nec",
+  "version": "${version}",
+
+  "name": "Not Enough Cursedness",
+  "description": "A Minecraft mode introducing every little bit of cursed items/behavior into the game!",
+  "authors": [
+    "Jonas_Jones"
+  ],
+  "contact": {
+    "homepage": "https://jonasjones.me/projects/nec",
+    "sources": "https://github.com/J-onasJones/NotEnoughCursedness",
+    "issues": "https://github.com/J-onasJones/NotEnoughCursedness/issues"
+  },
+
+  "license": "CC0-1.0",
+  "icon": "assets/nec/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "me.jonasjones.nec.NotEnoughCursedness"
+    ]
+  },
+  "mixins": [
+    "nec.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.14.17",
+    "fabric-api": "*",
+    "minecraft": "~1.19.4",
+    "java": ">=17"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}
