@@ -1,0 +1,10 @@
+{
+    "block.nec.blaze_block": "Blaze Block",
+    "block.nec.cursed_dirt_stairs": "Cursed Dirt Stairs",
+    "block.nec.cursed_dirt_slab": "Cursed Dirt Slab",
+    "block.nec.cursed_dirt": "Cursed Dirt",
+    "block.nec.green_birch_log": "Green Birch Log",
+    "block.nec.gun_block": "Gun Block",
+    "item.nec.dirt_sword": "Dirt Sword",
+    "itemGroup.nec.not_enough_cursedness": "Not Enough Cursedness"
+}

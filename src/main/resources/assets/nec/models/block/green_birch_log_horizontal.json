@@ -1,0 +1,7 @@
+{
+    "parent": "minecraft:block/cube_column_horizontal",
+    "textures": {
+      "end": "nec:block/green_birch_log_top",
+      "side": "nec:block/green_birch_log"
+    }
+  }

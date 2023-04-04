@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ABA",
+    " C ",
+    "   "
+  ],
+  "key": {
+    "A": {
+      "item": "minecraft:tripwire_hook"
+    },
+    "B": {
+      "item": "minecraft:string"
+    },
+    "C": {
+      "item": "minecraft:bow"
+    }
+  },
+  "result": {
+    "item": "minecraft:crossbow"
+  }
+}

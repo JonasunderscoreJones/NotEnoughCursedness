@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "nec:block/gun_block"
+    }
+  }
+}
