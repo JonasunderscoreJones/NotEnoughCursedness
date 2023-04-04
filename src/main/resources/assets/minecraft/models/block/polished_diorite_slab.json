@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "nec:block/polished_diorite",
+    "side": "nec:block/polished_diorite",
+    "top": "nec:block/polished_diorite"
+  }
+}

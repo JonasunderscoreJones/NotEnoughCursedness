@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "nec:block/polished_granite",
+    "side": "nec:block/polished_granite",
+    "top": "nec:block/polished_granite"
+  }
+}
