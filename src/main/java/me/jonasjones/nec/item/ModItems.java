@@ -12,6 +12,8 @@ public class ModItems {
     private static Item STEEL_ITEM;
     private static ToolItem DIRT_SWORD_ITEM;
     private static Item NEGATIVE_FLINT_ITEM;
+    private static Item LETTER_ITEM;
+    private static Item CHAINMAIL_ITEM;
 
     public static void register() {
         ToolItem DIRT_SWORD = new SwordItem(DirtToolMaterial.INSTANCE, 1, -3.0F, new Item.Settings());
@@ -25,5 +27,13 @@ public class ModItems {
         Item NEGATIVE_FLINT = new Item(new FabricItemSettings());
         NEGATIVE_FLINT_ITEM = Registry.register(Registries.ITEM, new Identifier("nec", "negative_flint"), NEGATIVE_FLINT);
         ModRegistries.register_item(NEGATIVE_FLINT_ITEM);
+
+        Item LETTER = new Item(new FabricItemSettings());
+        LETTER_ITEM = Registry.register(Registries.ITEM, new Identifier("nec", "letter"), LETTER);
+        ModRegistries.register_item(LETTER_ITEM);
+
+        Item CHAINMAIL = new Item(new FabricItemSettings());
+        CHAINMAIL_ITEM = Registry.register(Registries.ITEM, new Identifier("nec", "chainmail"), CHAINMAIL);
+        ModRegistries.register_item(CHAINMAIL_ITEM);
     }
 }
