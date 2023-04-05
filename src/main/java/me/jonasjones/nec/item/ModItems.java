@@ -14,6 +14,7 @@ public class ModItems {
     private static Item NEGATIVE_FLINT_ITEM;
     private static Item LETTER_ITEM;
     private static Item CHAINMAIL_ITEM;
+    private static Item AK47_ITEM;
 
     public static void register() {
         ToolItem DIRT_SWORD = new SwordItem(DirtToolMaterial.INSTANCE, 1, -3.0F, new Item.Settings());
@@ -35,5 +36,9 @@ public class ModItems {
         Item CHAINMAIL = new Item(new FabricItemSettings());
         CHAINMAIL_ITEM = Registry.register(Registries.ITEM, new Identifier("nec", "chainmail"), CHAINMAIL);
         ModRegistries.register_item(CHAINMAIL_ITEM);
+
+        Item AK47 = new Item(new FabricItemSettings());
+        AK47_ITEM = Registry.register(Registries.ITEM, new Identifier("nec", "ak_47"), AK47);
+        ModRegistries.register_item(AK47_ITEM);
     }
 }
