@@ -1,21 +1,22 @@
 package me.jonasjones.nec.util;
 
 import me.jonasjones.nec.block.ModBlocks;
-import net.fabricmc.fabric.api.entity.event.v1.ServerPlayerEvents;
-import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
-import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.fabricmc.fabric.api.registry.StrippableBlockRegistry;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.util.Identifier;
+import net.minecraft.client.gui.screens.CreateBuffetWorldScreen;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
 
 public class ModRegistries {
 
-    static final ItemGroup ITEM_GROUP = FabricItemGroup.builder(new Identifier("nec", "not_enough_cursedness"))
-            .icon(() -> ModBlocks.GREEN_BIRCH_LOG_ITEM.getDefaultStack())
-            .build();
+    static final CreativeModeTab ITEM_GROUP = new CreativeModeTab(0, "nec") {
+        @Override
+        public ItemStack makeIcon() {
+            return ModBlocks.GREEN_BIRCH_LOG_ITEM.getDefaultInstance();
+        }
+    };
     public static void registerModStuffs() {
         registerFuels();
         registerCommands();
@@ -51,8 +52,8 @@ public class ModRegistries {
     }
 
     public static void register_item(Item CUSTOM_ITEM) {
-        ItemGroupEvents.modifyEntriesEvent(ITEM_GROUP).register(content -> {
-            content.add(CUSTOM_ITEM);
-        });
+        //CreateBuffetWorldScreen.modifyEntriesEvent(ITEM_GROUP).register(content -> {
+        //    content.add(CUSTOM_ITEM);
+        //});
     }
 }
