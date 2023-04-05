@@ -1,0 +1,7 @@
+{
+    "parent": "minecraft:item/handheld",
+    "textures": {
+      "layer0": "nec:item/mask",
+      "layer1": "minecraft:textures/models/armor/name_layer_1.png"
+    }
+  }
