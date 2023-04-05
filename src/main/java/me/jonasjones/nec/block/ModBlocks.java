@@ -19,6 +19,7 @@ public class ModBlocks {
     public static final Block DEEPSLATE_DIAMOND_ORE_ORE = new Block(FabricBlockSettings.of(Material.STONE).strength(4.0F));
     public static final Block JAVA_BLOCK = new Block(FabricBlockSettings.of(Material.STONE).strength(5.0F));
     public static final Block POCKET_BLOCK = new Block(FabricBlockSettings.of(Material.STONE).strength(5.0F));
+    public static final Block THICC_END_ROD = new Block(FabricBlockSettings.of(Material.STONE).strength(1.0F));
     private static BlockItem GUN_BLOCK_ITEM;
     private static Block GUN_BLOCK_BLOCK;
     private static BlockItem BLAZE_BLOCK_ITEM;
@@ -33,6 +34,8 @@ public class ModBlocks {
     public static Block JAVA_BLOCK_BLOCK;
     public static BlockItem POCKET_BLOCK_ITEM;
     public static Block POCKET_BLOCK_BLOCK;
+    public static BlockItem THICC_END_ROD_ITEM;
+    public static Block THICC_END_ROD_BLOCK;
     //public static final Block GREEN_BIRCH_WOOD = new PillarBlock(FabricBlockSettings.of(Material.WOOD).strength(4.0f));
     //public static final Block STRIPPED_GREEN_BIRCH_LOG = new PillarBlock(FabricBlockSettings.of(Material.WOOD).strength(4.0f));
     //public static final Block STRIPPED_GREEN_BIRCH_WOOD = new PillarBlock(FabricBlockSettings.of(Material.WOOD).strength(4.0f));
@@ -65,5 +68,9 @@ public class ModBlocks {
         POCKET_BLOCK_BLOCK = Registry.register(Registries.BLOCK, new Identifier("nec", "pocket_block"), POCKET_BLOCK);
         POCKET_BLOCK_ITEM = Registry.register(Registries.ITEM, new Identifier("nec", "pocket_block"), new BlockItem(POCKET_BLOCK, new FabricItemSettings()));
         ModRegistries.register_item(POCKET_BLOCK_ITEM);
+
+        THICC_END_ROD_BLOCK = Registry.register(Registries.BLOCK, new Identifier("nec", "thicc_end_rod"), THICC_END_ROD);
+        THICC_END_ROD_ITEM = Registry.register(Registries.ITEM, new Identifier("nec", "thicc_end_rod"), new BlockItem(THICC_END_ROD_BLOCK, new FabricItemSettings()));
+        ModRegistries.register_item(THICC_END_ROD_ITEM);
     }
 }
