@@ -11,9 +11,11 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.util.Identifier;
 
+import static me.jonasjones.nec.NotEnoughCursedness.MOD_ID;
+
 public class ModRegistries {
 
-    static final ItemGroup ITEM_GROUP = FabricItemGroup.builder(new Identifier("nec", "not_enough_cursedness"))
+    static final ItemGroup ITEM_GROUP = FabricItemGroup.builder(new Identifier(MOD_ID, "not_enough_cursedness"))
             .icon(() -> ModBlocks.GREEN_BIRCH_LOG_ITEM.getDefaultStack())
             .build();
     public static void registerModStuffs() {
