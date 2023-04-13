@@ -11,12 +11,12 @@ import net.minecraft.world.item.ItemStack;
 
 public class ModRegistries {
 
-    static final CreativeModeTab ITEM_GROUP = new CreativeModeTab(0, "nec") {
+    /*static final CreativeModeTab ITEM_GROUP = new CreativeModeTab(0, "nec") {
         @Override
         public ItemStack makeIcon() {
             return ModBlocks.GREEN_BIRCH_LOG_ITEM.getDefaultInstance();
         }
-    };
+    };*/
     public static void registerModStuffs() {
         registerFuels();
         registerCommands();
