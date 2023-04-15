@@ -1,0 +1,10 @@
+{
+  "music_disc.cursed": {
+    "sounds": [
+      {
+        "name": "nec:records/cursed",
+        "stream": true
+      }
+    ]
+  }
+}

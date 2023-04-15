@@ -17,6 +17,7 @@ public class NotEnoughCursedness implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		//register blocks
+		ModRegistries.registerSoundEvents();
 		ModBlocks.register();
 		ModItems.register();
 		ModRegistries.registerModStuffs();

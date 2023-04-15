@@ -1,16 +1,21 @@
 package me.jonasjones.nec.util;
 
 import me.jonasjones.nec.block.ModBlocks;
-import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
-import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.fabricmc.fabric.api.registry.StrippableBlockRegistry;
+import net.minecraft.core.Registry;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.sounds.SoundEvent;
 import net.minecraft.world.item.Item;
 
 import static me.jonasjones.nec.NotEnoughCursedness.MOD_ID;
+import static net.minecraft.sounds.SoundEvent.createVariableRangeEvent;
 
 public class ModRegistries {
+
+    public static SoundEvent SOUND_CURSED;
 
     /*static final ItemGroup ITEM_GROUP = FabricItemGroup.builder(new Identifier(MOD_ID, "not_enough_cursedness"))
             .icon(() -> ModBlocks.GREEN_BIRCH_LOG_ITEM.getDefaultStack())
@@ -53,5 +58,10 @@ public class ModRegistries {
         //ItemGroupEvents.modifyEntriesEvent(ITEM_GROUP).register(content -> {
         //    content.add(CUSTOM_ITEM);
         //});
+    }
+
+    public static void registerSoundEvents() {
+        ResourceLocation cursedID = new ResourceLocation(MOD_ID, "cursed");
+        SOUND_CURSED = Registry.register(BuiltInRegistries.SOUND_EVENT, cursedID, createVariableRangeEvent(cursedID));
     }
 }

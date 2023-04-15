@@ -6,8 +6,11 @@ import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.core.Registry;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.SwordItem;
 import net.minecraft.world.item.TieredItem;
+
+import static me.jonasjones.nec.util.ModRegistries.SOUND_CURSED;
 import static net.minecraft.core.registries.BuiltInRegistries.ITEM;
 
 import static me.jonasjones.nec.NotEnoughCursedness.MOD_ID;
@@ -19,6 +22,7 @@ public class ModItems {
     private static Item LETTER_ITEM;
     private static Item CHAINMAIL_ITEM;
     private static Item AK47_ITEM;
+    private static Item DISC_CURSED_ITEM;
 
     public static void register() {
         TieredItem DIRT_SWORD = new SwordItem(DirtToolMaterial.INSTANCE, 1, -3.0F, new Item.Properties());
@@ -44,5 +48,9 @@ public class ModItems {
         Item AK47 = new Item(new FabricItemSettings());
         AK47_ITEM = Registry.register(ITEM, new ResourceLocation(MOD_ID, "ak_47"), AK47);
         ModRegistries.register_item(AK47_ITEM);
+
+        AbstractDiscItem DISC_CURSED = new AbstractDiscItem(14, SOUND_CURSED,new FabricItemSettings().rarity(Rarity.RARE).maxCount(1), 0);
+        DISC_CURSED_ITEM = Registry.register(ITEM, new ResourceLocation(MOD_ID, "music_disc_cursed"), DISC_CURSED);
+        ModRegistries.register_item(DISC_CURSED_ITEM);
     }
 }
