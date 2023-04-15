@@ -8,8 +8,9 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.SwordItem;
 import net.minecraft.world.item.TieredItem;
+import static net.minecraft.core.registries.BuiltInRegistries.ITEM;
 
-import static net.minecraft.core.Registry.ITEM;
+import static me.jonasjones.nec.NotEnoughCursedness.MOD_ID;
 
 public class ModItems {
     private static Item STEEL_ITEM;
@@ -21,27 +22,27 @@ public class ModItems {
 
     public static void register() {
         TieredItem DIRT_SWORD = new SwordItem(DirtToolMaterial.INSTANCE, 1, -3.0F, new Item.Properties());
-        DIRT_SWORD_ITEM = Registry.register(ITEM, new ResourceLocation("nec", "dirt_sword"), DIRT_SWORD);
+        DIRT_SWORD_ITEM = Registry.register(ITEM, new ResourceLocation(MOD_ID, "dirt_sword"), DIRT_SWORD);
         ModRegistries.register_item(DIRT_SWORD_ITEM);
 
         Item STEEL = new Item(new FabricItemSettings());
-        STEEL_ITEM = Registry.register(ITEM, new ResourceLocation("nec", "steel"), STEEL);
+        STEEL_ITEM = Registry.register(ITEM, new ResourceLocation(MOD_ID, "steel"), STEEL);
         ModRegistries.register_item(STEEL_ITEM);
 
         Item NEGATIVE_FLINT = new Item(new FabricItemSettings());
-        NEGATIVE_FLINT_ITEM = Registry.register(ITEM, new ResourceLocation("nec", "negative_flint"), NEGATIVE_FLINT);
+        NEGATIVE_FLINT_ITEM = Registry.register(ITEM, new ResourceLocation(MOD_ID, "negative_flint"), NEGATIVE_FLINT);
         ModRegistries.register_item(NEGATIVE_FLINT_ITEM);
 
         Item LETTER = new Item(new FabricItemSettings());
-        LETTER_ITEM = Registry.register(ITEM, new ResourceLocation("nec", "letter"), LETTER);
+        LETTER_ITEM = Registry.register(ITEM, new ResourceLocation(MOD_ID, "letter"), LETTER);
         ModRegistries.register_item(LETTER_ITEM);
 
         Item CHAINMAIL = new Item(new FabricItemSettings());
-        CHAINMAIL_ITEM = Registry.register(ITEM, new ResourceLocation("nec", "chainmail"), CHAINMAIL);
+        CHAINMAIL_ITEM = Registry.register(ITEM, new ResourceLocation(MOD_ID, "chainmail"), CHAINMAIL);
         ModRegistries.register_item(CHAINMAIL_ITEM);
 
         Item AK47 = new Item(new FabricItemSettings());
-        AK47_ITEM = Registry.register(ITEM, new ResourceLocation("nec", "ak_47"), AK47);
+        AK47_ITEM = Registry.register(ITEM, new ResourceLocation(MOD_ID, "ak_47"), AK47);
         ModRegistries.register_item(AK47_ITEM);
     }
 }
