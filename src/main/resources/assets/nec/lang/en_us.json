@@ -28,6 +28,7 @@
     "itemGroup.nec.not_enough_cursedness": "Not Enough Cursedness",
 
     "block.minecraft.ancient_debris": "Cinnamon Roll",
+    "block.minecraft.calibrated_sculk_sensor": "Variable Resistor",
     "block.minecraft.chiseled_polished_blackstone": "Chiseled Polish Blackstone",
     "block.minecraft.cracked_polished_blackstone_bricks": "Cracked Polish Blackstone Bricks",
     "block.minecraft.crying_obsidian": "Obsadian",
@@ -63,6 +64,7 @@
     "block.minecraft.polished_granite_slab": "Polish Granite Slab",
     "block.minecraft.polished_granite_stairs": "Polish Granite Stairs",
     "block.minecraft.raw_gold_block": "Block of Raw Butter",
+    "block.minecraft.sculk_sensor": "Resistor",
     "block.minecraft.stone": "Rock",
     "block.minecraft.stripped_mangrove_log": "Beetroot Block",
     "item.minecraft.enchanted_golden_apple": "Enchanted Buttered Apple",
@@ -93,6 +95,8 @@
     "item.minecraft.netherite_shovel": "Cinnamone Butter Shovel",
     "item.minecraft.netherite_sword": "Cinnamone Butter Sword",
     "item.minecraft.raw_gold": "Raw Butter",
+    "subtitles.block.sculk_sensor.clicking": "Resistor starts clicking",
+    "subtitles.block.sculk_sensor.clicking_stop": "Resistor stops clicking",
     "subtitles.item.armor.equip_gold": "butter armor clinks",
     "trim_material.minecraft.gold": "Butter Material"
 }
