@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "nec:pocket_block"
+    }
+  ],
+  "result": {
+    "item": "nec:java_block"
+  },
+  "show_notification": true
+}
