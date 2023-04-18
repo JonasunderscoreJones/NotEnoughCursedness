@@ -1,0 +1,31 @@
+{
+  "display": {
+    "icon": {
+      "item": "nec:pocket_block"
+    },
+    "title": {
+      "translate": "advancements.nec.pocket_block.title"
+    },
+    "description": {
+      "translate": "advancements.nec.pocket_block.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "annouce_to_chat": true
+  },
+  "parent": "nec:nec",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "nec:pocket_block"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

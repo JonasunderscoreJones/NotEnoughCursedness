@@ -1,0 +1,6 @@
+{
+    "parent": "minecraft:item/handheld",
+    "textures": {
+      "layer0": "nec:item/helmet_on_a_stick"
+    }
+  }

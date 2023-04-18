@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "AAA",
+    "ABA",
+    "AAA"
+  ],
+  "key": {
+    "A": {
+      "item": "minecraft:deepslate"
+    },
+    "B": {
+      "item": "minecraft:deepslate_diamond_ore"
+    }
+  },
+  "result": {
+    "item": "nec:deepslate_diamond_ore_ore"
+  }
+}
