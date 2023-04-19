@@ -13,7 +13,7 @@
     "show_toast": true,
     "annouce_to_chat": true
   },
-  "parent": "nec:nec",
+  "parent": "nec:pocket_block",
   "criteria": {
     "requirement": {
       "trigger": "minecraft:inventory_changed",
