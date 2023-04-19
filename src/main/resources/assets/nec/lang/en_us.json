@@ -4,6 +4,8 @@
 
     "advancements.nec.ak_47.description": "Obtain an AK47",
     "advancements.nec.ak_47.title": "Congrats, You're f*cking useless!",
+    "advancements.nec.baguette.description": "Obtain a French Baguette",
+    "advancements.nec.baguette.title": "LOOOOOOOOOOOOOOOONG",
     "advancements.nec.dirt_sword.description": "Haha, get it? ... -_-",
     "advancements.nec.dirt_sword.title": "You are now dirty",
     "advancements.nec.pocket_block.description": "Craft a Pocket Block",
@@ -24,6 +26,7 @@
     "block.nec.java_block": "Java Block",
     "block.nec.pocket_block": "Pocket Block",
     "item.nec.ak_47": "AK-47",
+    "item.nec.baguette": "Baguette",
     "item.nec.chainmail": "Chainmail",
     "item.nec.dirt_sword": "Dirt Sword",
     "item.nec.helmet_on_a_stick": "Helmet on a Stick",
