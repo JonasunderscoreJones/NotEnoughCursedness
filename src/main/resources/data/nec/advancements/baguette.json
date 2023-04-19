@@ -1,0 +1,31 @@
+{
+  "display": {
+    "icon": {
+      "item": "nec:baguette"
+    },
+    "title": {
+      "translate": "advancements.nec.baguette.title"
+    },
+    "description": {
+      "translate": "advancements.nec.baguette.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "annouce_to_chat": true
+  },
+  "parent": "nec:nec",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "nec:baguette"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}
