@@ -1,11 +1,13 @@
 package me.jonasjones.nec.item;
 
+import me.jonasjones.nec.item.foodcompontents.BaguetteFoodComponent;
 import me.jonasjones.nec.item.materials.DirtToolMaterial;
 import me.jonasjones.nec.util.ModRegistries;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.core.Registry;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemNameBlockItem;
 import net.minecraft.world.item.SwordItem;
 import net.minecraft.world.item.TieredItem;
 import static net.minecraft.core.registries.BuiltInRegistries.ITEM;
@@ -20,6 +22,7 @@ public class ModItems {
     private static Item CHAINMAIL_ITEM;
     private static Item AK47_ITEM;
     private static Item HELMET_ON_A_STICK_ITEM;
+    private static Item BAGUETTE_ITEM;
 
     public static void register() {
         TieredItem DIRT_SWORD = new SwordItem(DirtToolMaterial.INSTANCE, 1, -3.0F, new Item.Properties());
@@ -49,5 +52,9 @@ public class ModItems {
         Item HELMET_ON_A_STICK = new Item(new FabricItemSettings());
         HELMET_ON_A_STICK_ITEM = Registry.register(ITEM, new ResourceLocation(MOD_ID, "helmet_on_a_stick"), HELMET_ON_A_STICK);
         ModRegistries.register_item(HELMET_ON_A_STICK_ITEM);
+
+        Item BAGUETTE = new BaguetteFoodComponent(new Item.Properties());
+        BAGUETTE_ITEM = Registry.register(ITEM, new ResourceLocation(MOD_ID, "baguette"), BAGUETTE);
+        ModRegistries.register_item(BAGUETTE_ITEM);
     }
 }
