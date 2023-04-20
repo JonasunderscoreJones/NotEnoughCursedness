@@ -47,7 +47,7 @@ public class ModItems {
         ModRegistries.register_item(AK47_ITEM);
 
         Item HELMET_ON_A_STICK = new Item(new FabricItemSettings());
-        HELMET_ON_A_STICK_ITEM = Registry.register(ITEM, new ResourceLocation(MOD_ID, "helmet_on_a_stick"), AK47);
+        HELMET_ON_A_STICK_ITEM = Registry.register(ITEM, new ResourceLocation(MOD_ID, "helmet_on_a_stick"), HELMET_ON_A_STICK);
         ModRegistries.register_item(HELMET_ON_A_STICK);
     }
 }
