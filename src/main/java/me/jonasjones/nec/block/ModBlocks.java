@@ -11,8 +11,8 @@ import net.minecraft.world.level.block.RotatedPillarBlock;
 import net.minecraft.world.level.material.Material;
 
 import static me.jonasjones.nec.NotEnoughCursedness.MOD_ID;
-import static net.minecraft.core.registries.BuiltInRegistries.BLOCK;
-import static net.minecraft.core.registries.BuiltInRegistries.ITEM;
+import static net.minecraft.core.Registry.BLOCK;
+import static net.minecraft.core.Registry.ITEM;
 
 public class ModBlocks {
     public static final Block GREEN_BIRCH_LOG = new RotatedPillarBlock(FabricBlockSettings.of(Material.WOOD).strength(4.0f));

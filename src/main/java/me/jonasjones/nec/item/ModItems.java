@@ -8,9 +8,9 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.SwordItem;
 import net.minecraft.world.item.TieredItem;
-import static net.minecraft.core.registries.BuiltInRegistries.ITEM;
 
 import static me.jonasjones.nec.NotEnoughCursedness.MOD_ID;
+import static net.minecraft.core.Registry.ITEM;
 
 public class ModItems {
     private static Item STEEL_ITEM;
@@ -19,6 +19,7 @@ public class ModItems {
     private static Item LETTER_ITEM;
     private static Item CHAINMAIL_ITEM;
     private static Item AK47_ITEM;
+    private static Item HELMET_ON_A_STICK_ITEM;
 
     public static void register() {
         TieredItem DIRT_SWORD = new SwordItem(DirtToolMaterial.INSTANCE, 1, -3.0F, new Item.Properties());
@@ -44,5 +45,9 @@ public class ModItems {
         Item AK47 = new Item(new FabricItemSettings());
         AK47_ITEM = Registry.register(ITEM, new ResourceLocation(MOD_ID, "ak_47"), AK47);
         ModRegistries.register_item(AK47_ITEM);
+
+        Item HELMET_ON_A_STICK = new Item(new FabricItemSettings());
+        HELMET_ON_A_STICK_ITEM = Registry.register(ITEM, new ResourceLocation(MOD_ID, "helmet_on_a_stick"), AK47);
+        ModRegistries.register_item(HELMET_ON_A_STICK);
     }
 }
