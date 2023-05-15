@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "A  ",
+    "AA ",
+    "AAA"
+  ],
+  "key": {
+    "A": {
+      "item": "minecraft:fletching_table"
+    }
+  },
+  "result": {
+    "item": "nec:fletching_stairs",
+    "count": 4
+  }
+}
