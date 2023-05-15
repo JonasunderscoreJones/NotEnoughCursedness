@@ -1,20 +1,13 @@
 {
-    "type": "minecraft:block",
-    "pools": [
-      {
-        "rolls": 1,
-        "entries": [
-          {
-            "type": "minecraft:item",
-            "name": "nec:java_block"
-          }
-        ],
-        "conditions": [
-          {
-            "condition": "minecraft:survives_explosion"
-          }
-        ]
-      }
-    ]
-  }
-
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "nec:java_block"
+        }
+      ]
+    }
+  ]
+}
