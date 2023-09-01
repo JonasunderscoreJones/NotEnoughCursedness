@@ -7,20 +7,20 @@ import net.minecraft.core.Registry;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.level.block.*;
-import net.minecraft.world.level.material.Material;
+import net.minecraft.client.resources.model.Material;
 
 import static me.jonasjones.nec.NotEnoughCursedness.MOD_ID;
 import static net.minecraft.core.registries.BuiltInRegistries.BLOCK;
 import static net.minecraft.core.registries.BuiltInRegistries.ITEM;
 
 public class ModBlocks {
-    public static final Block GREEN_BIRCH_LOG = new RotatedPillarBlock(FabricBlockSettings.of(Material.WOOD).strength(4.0f));
-    public static final Block BLAZE_BLOCK = new Block(FabricBlockSettings.of(Material.STONE).strength(4.0F));
-    public static final Block GUN_BLOCK = new Block(FabricBlockSettings.of(Material.STONE).strength(4.0F));
-    public static final Block DIAMOND_ORE_ORE = new Block(FabricBlockSettings.of(Material.STONE).strength(4.0F));
-    public static final Block DEEPSLATE_DIAMOND_ORE_ORE = new Block(FabricBlockSettings.of(Material.STONE).strength(4.0F));
-    public static final Block JAVA_BLOCK = new Block(FabricBlockSettings.of(Material.STONE).strength(5.0F));
-    public static final Block POCKET_BLOCK = new Block(FabricBlockSettings.of(Material.STONE).strength(5.0F));
+    public static final Block GREEN_BIRCH_LOG = new RotatedPillarBlock(FabricBlockSettings.copyOf(Blocks.BIRCH_LOG).strength(4.0f));
+    public static final Block BLAZE_BLOCK = new Block(FabricBlockSettings.copyOf(Blocks.DIAMOND_BLOCK).strength(4.0F));
+    public static final Block GUN_BLOCK = new Block(FabricBlockSettings.copyOf(Blocks.DIAMOND_BLOCK).strength(4.0F));
+    public static final Block DIAMOND_ORE_ORE = new Block(FabricBlockSettings.copyOf(Blocks.DIAMOND_ORE).strength(4.0F));
+    public static final Block DEEPSLATE_DIAMOND_ORE_ORE = new Block(FabricBlockSettings.copyOf(Blocks.DEEPSLATE_DIAMOND_ORE).strength(4.0F));
+    public static final Block JAVA_BLOCK = new Block(FabricBlockSettings.copyOf(Blocks.DIAMOND_BLOCK).strength(5.0F));
+    public static final Block POCKET_BLOCK = new Block(FabricBlockSettings.copyOf(Blocks.DIAMOND_BLOCK).strength(5.0F));
     public static Block FLETCHING_STAIRS_BLOCK = null;
     private static BlockItem GUN_BLOCK_ITEM;
     private static Block GUN_BLOCK_BLOCK;
@@ -71,7 +71,7 @@ public class ModBlocks {
         POCKET_BLOCK_ITEM = Registry.register(ITEM, new ResourceLocation(MOD_ID, "pocket_block"), new BlockItem(POCKET_BLOCK, new FabricItemSettings()));
         ModRegistries.register_item(POCKET_BLOCK_ITEM);
 
-        FLETCHING_STAIRS_BLOCK = new StairBlock(GREEEN_BIRCH_LOG_BLOCK.defaultBlockState(), FabricBlockSettings.of(Material.WOOD).strength(1.0F));
+        FLETCHING_STAIRS_BLOCK = new StairBlock(GREEEN_BIRCH_LOG_BLOCK.defaultBlockState(), FabricBlockSettings.copyOf(Blocks.OAK_STAIRS).strength(1.0F));
         FLETCHING_STAIRS_BLOCK_BLOCK = Registry.register(BLOCK, new ResourceLocation(MOD_ID, "fletching_stairs"), FLETCHING_STAIRS_BLOCK);
         FLETCHING_STAIRS_TIEM = Registry.register(ITEM, new ResourceLocation(MOD_ID, "fletching_stairs"), new BlockItem(FLETCHING_STAIRS_BLOCK, new FabricItemSettings()));
         ModRegistries.register_item(FLETCHING_STAIRS_TIEM);
