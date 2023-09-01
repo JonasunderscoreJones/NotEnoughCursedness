@@ -7,7 +7,6 @@ import net.minecraft.core.Registry;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.level.block.*;
-import net.minecraft.client.resources.model.Material;
 
 import static me.jonasjones.nec.NotEnoughCursedness.MOD_ID;
 import static net.minecraft.core.registries.BuiltInRegistries.BLOCK;
