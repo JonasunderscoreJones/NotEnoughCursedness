@@ -1,5 +1,5 @@
 # Not Enough Cursedness
- A Minecraft mode introducing every little bit of cursed items/behavior into the game
+ A Minecraft mod introducing every little bit of cursed items/behavior into the game
 
  <a href="https://github.com/J-onasJones/NotEnughCursedness/blob/master/LICENSE"><img src="https://img.shields.io/github/license/J-onasJones/NotEnoughCursedness?style=flat&color=900c3f" alt="License"></a>
 <a href="https://discord.gg/V2EsuUVmWh"><img src="https://img.shields.io/discord/702180921234817135?color=5865f2&label=Discord&style=flat" alt="Discord"></a>
