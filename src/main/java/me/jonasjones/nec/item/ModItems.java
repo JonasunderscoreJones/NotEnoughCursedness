@@ -13,13 +13,13 @@ import static net.minecraft.core.registries.BuiltInRegistries.ITEM;
 import static me.jonasjones.nec.NotEnoughCursedness.MOD_ID;
 
 public class ModItems {
-    private static Item STEEL_ITEM;
-    private static TieredItem DIRT_SWORD_ITEM;
-    private static Item NEGATIVE_FLINT_ITEM;
-    private static Item LETTER_ITEM;
-    private static Item CHAINMAIL_ITEM;
-    private static Item AK47_ITEM;
-    private static Item HELMET_ON_A_STICK_ITEM;
+    public static Item STEEL_ITEM;
+    public static TieredItem DIRT_SWORD_ITEM;
+    public static Item NEGATIVE_FLINT_ITEM;
+    public static Item LETTER_ITEM;
+    public static Item CHAINMAIL_ITEM;
+    public static Item AK47_ITEM;
+    public static Item HELMET_ON_A_STICK_ITEM;
 
     public static void register() {
         TieredItem DIRT_SWORD = new SwordItem(DirtToolMaterial.INSTANCE, 1, -3.0F, new Item.Properties());
