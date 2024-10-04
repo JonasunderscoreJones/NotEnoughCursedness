@@ -3,24 +3,21 @@ package me.jonasjones.nec.util;
 import me.jonasjones.nec.block.ModBlocks;
 import me.jonasjones.nec.item.ModItems;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
-import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.fabricmc.fabric.api.registry.StrippableBlockRegistry;
-import net.minecraft.core.Registry;
-import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.network.chat.Component;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.CreativeModeTabs;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
+import net.minecraft.item.BlockItem;
+import net.minecraft.item.ItemGroup;
+import net.minecraft.item.ItemStack;
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.Registry;
+import net.minecraft.text.Text;
+import net.minecraft.util.Identifier;
 
 import static me.jonasjones.nec.NotEnoughCursedness.MOD_ID;
 
 public class ModRegistries {
-    public static CreativeModeTab ITEM_GROUP = FabricItemGroup.builder().title(Component.translatable("itemGroup.nec.not_enough_cursedness")).icon(() -> new ItemStack(ModBlocks.GREEN_BIRCH_LOG_ITEM)).build();
-
+    public static ItemGroup NEC_GROUP = null;
 
     public static void registerModStuffs() {
         registerFuels();
@@ -57,38 +54,37 @@ public class ModRegistries {
         //ServerPlayerEvents.COPY_FROM.register(new ModPlayerEventCopyFrom());
     }
 
-    public static void register_item(Item CUSTOM_ITEM) {
+    public static void register_item(BlockItem CUSTOM_ITEM) {
         //ItemGroupEvents.modifyEntriesEvent(ITEM_GROUP).register(content -> {
         //    content.add(CUSTOM_ITEM);
         //});
     }
 
     public static void register_itemGroup() {
+        NEC_GROUP = FabricItemGroup.builder()
+                .icon(() -> new ItemStack(ModItems.DIRT_SWORD_ITEM))
+                .displayName(Text.translatable("itemGroup.nec.not_enough_cursedness"))
+                .entries(((displayContext, entries) -> {
+                    entries.add(new ItemStack(ModBlocks.GREEN_BIRCH_LOG_ITEM));
+                    entries.add(new ItemStack(ModBlocks.BLAZE_BLOCK));
+                    entries.add(new ItemStack(ModBlocks.GUN_BLOCK));
+                    entries.add(new ItemStack(ModBlocks.DIAMOND_ORE_ORE));
+                    entries.add(new ItemStack(ModBlocks.DEEPSLATE_DIAMOND_ORE_ORE));
+                    entries.add(new ItemStack(ModBlocks.JAVA_BLOCK));
+                    entries.add(new ItemStack(ModBlocks.POCKET_BLOCK));
+                    entries.add(new ItemStack(ModBlocks.FLETCHING_STAIRS_BLOCK));
 
-        ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.BUILDING_BLOCKS).register(content -> {
-            content.accept(new ItemStack(ModBlocks.GREEN_BIRCH_LOG_ITEM));
-            content.accept(new ItemStack(ModBlocks.BLAZE_BLOCK));
-            content.accept(new ItemStack(ModBlocks.GUN_BLOCK));
-            content.accept(new ItemStack(ModBlocks.DIAMOND_ORE_ORE));
-            content.accept(new ItemStack(ModBlocks.DEEPSLATE_DIAMOND_ORE_ORE));
-            content.accept(new ItemStack(ModBlocks.JAVA_BLOCK));
-            content.accept(new ItemStack(ModBlocks.POCKET_BLOCK));
-            content.accept(new ItemStack(ModBlocks.FLETCHING_STAIRS_BLOCK));
-        });
+                    entries.add(new ItemStack(ModItems.STEEL_ITEM));
+                    entries.add(new ItemStack(ModItems.NEGATIVE_FLINT_ITEM));
+                    entries.add(new ItemStack(ModItems.LETTER_ITEM));
+                    entries.add(new ItemStack(ModItems.CHAINMAIL_ITEM));
 
-        ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.INGREDIENTS).register(content -> {
-            content.accept(new ItemStack(ModItems.STEEL_ITEM));
-            content.accept(new ItemStack(ModItems.NEGATIVE_FLINT_ITEM));
-            content.accept(new ItemStack(ModItems.LETTER_ITEM));
-            content.accept(new ItemStack(ModItems.CHAINMAIL_ITEM));
-        });
+                    entries.add(new ItemStack(ModItems.DIRT_SWORD_ITEM));
+                    entries.add(new ItemStack(ModItems.AK47_ITEM));
+                    entries.add(new ItemStack(ModItems.HELMET_ON_A_STICK_ITEM));
+                }))
+                .build();
 
-        ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.COMBAT).register(content -> {
-            content.accept(new ItemStack(ModItems.DIRT_SWORD_ITEM));
-            content.accept(new ItemStack(ModItems.AK47_ITEM));
-            content.accept(new ItemStack(ModItems.HELMET_ON_A_STICK_ITEM));
-        });
-
-        ITEM_GROUP = Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, new ResourceLocation(MOD_ID, "nec"), ITEM_GROUP);
+        Registry.register(Registries.ITEM_GROUP, Identifier.of(MOD_ID, "nec"), NEC_GROUP);
     }
 }

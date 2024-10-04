@@ -2,13 +2,13 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "minecraft:player_head"
+      "item": "minecraft:flint_and_steel"
     },
     {
-      "item": "minecraft:shears"
+      "item": "nec:negative_flint"
     }
   ],
   "result": {
-    "item": "minecraft:skeleton_skull"
+    "id": "nec:steel"
   }
 }

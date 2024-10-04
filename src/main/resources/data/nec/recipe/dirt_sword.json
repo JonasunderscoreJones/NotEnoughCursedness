@@ -1,22 +1,19 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "A B",
-    "A B",
-    " C "
+    " A ",
+    " A ",
+    " B "
   ],
   "key": {
     "A": {
-      "item": "minecraft:lava_bucket"
+      "item": "minecraft:dirt"
     },
     "B": {
-      "item": "minecraft:water_bucket"
-    },
-    "C": {
       "item": "minecraft:stick"
     }
   },
   "result": {
-    "item": "minecraft:stone_sword"
+    "id": "nec:dirt_sword"
   }
 }

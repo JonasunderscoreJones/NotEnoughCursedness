@@ -2,13 +2,13 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "tag": "minecraft:beds"
+      "item": "minecraft:zombie_head"
     },
     {
-      "item": "minecraft:stone"
+      "item": "minecraft:egg"
     }
   ],
   "result": {
-    "item": "minecraft:bedrock"
+    "id": "minecraft:zombie_spawn_egg"
   }
 }

@@ -7,7 +7,7 @@
   }
     ],
   "result": {
-    "item": "nec:pocket_block"
+    "id": "nec:pocket_block"
   },
   "show_notification": true
 }

@@ -1,41 +1,43 @@
 package me.jonasjones.nec.item.materials;
 
 
-import net.minecraft.world.item.Items;
-import net.minecraft.world.item.Tier;
-import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.block.Block;
+import net.minecraft.item.Items;
+import net.minecraft.item.ToolMaterial;
+import net.minecraft.recipe.Ingredient;
+import net.minecraft.registry.tag.TagKey;
 
-public class DirtToolMaterial implements Tier {
+public class DirtToolMaterial implements ToolMaterial {
 
     public static final DirtToolMaterial INSTANCE = new DirtToolMaterial();
 
     @Override
-    public int getUses() {
+    public int getDurability() {
         return 5;
     }
 
     @Override
-    public float getSpeed() {
+    public float getMiningSpeedMultiplier() {
         return 1;
     }
 
     @Override
-    public float getAttackDamageBonus() {
+    public float getAttackDamage() {
         return 2;
     }
 
     @Override
-    public int getLevel() {
-        return 0;
+    public TagKey<Block> getInverseTag() {
+        return null;
     }
 
     @Override
-    public int getEnchantmentValue() {
+    public int getEnchantability() {
         return 100;
     }
 
     @Override
     public Ingredient getRepairIngredient() {
-        return Ingredient.of(Items.DIRT, Items.COARSE_DIRT, Items.DIRT_PATH, Items.ROOTED_DIRT);
+        return Ingredient.ofItems(Items.DIRT, Items.COARSE_DIRT, Items.DIRT_PATH, Items.ROOTED_DIRT);
     }
 }

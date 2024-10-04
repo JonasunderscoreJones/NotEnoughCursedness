@@ -12,7 +12,7 @@
     "###"
   ],
   "result": {
-    "item": "nec:gun_block"
+    "id": "nec:gun_block"
   },
   "show_notification": true
 }

@@ -19,6 +19,9 @@
 
   "environment": "*",
   "entrypoints": {
+    "fabric-datagen": [
+      "me.jonasjones.nec.datagen.NecDataGen"
+    ],
     "main": [
       "me.jonasjones.nec.NotEnoughCursedness"
     ]

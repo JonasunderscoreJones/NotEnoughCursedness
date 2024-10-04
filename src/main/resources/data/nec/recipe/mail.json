@@ -1,19 +1,20 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "AAA",
     "ABA",
+    "AAA",
     "AAA"
   ],
   "key": {
     "A": {
-      "item": "minecraft:stone"
+      "item": "minecraft:paper"
     },
     "B": {
-      "item": "minecraft:diamond_ore"
+      "item": "minecraft:honeycomb"
     }
   },
   "result": {
-    "item": "nec:diamond_ore_ore"
+    "id": "nec:letter",
+    "count": 8
   }
 }

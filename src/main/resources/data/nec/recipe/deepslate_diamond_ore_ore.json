@@ -1,20 +1,19 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "ABA",
     "AAA",
+    "ABA",
     "AAA"
   ],
   "key": {
     "A": {
-      "item": "minecraft:paper"
+      "item": "minecraft:deepslate"
     },
     "B": {
-      "item": "minecraft:honeycomb"
+      "item": "minecraft:deepslate_diamond_ore"
     }
   },
   "result": {
-    "item": "nec:letter",
-    "count": 8
+    "id": "nec:deepslate_diamond_ore_ore"
   }
 }

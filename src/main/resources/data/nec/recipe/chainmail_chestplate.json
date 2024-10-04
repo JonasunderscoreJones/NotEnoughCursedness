@@ -1,19 +1,16 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
+    "A A",
     "AAA",
-    "ABA",
     "AAA"
   ],
   "key": {
     "A": {
-      "item": "minecraft:stone"
-    },
-    "B": {
-      "item": "minecraft:diamond"
+      "item": "nec:chainmail"
     }
   },
   "result": {
-    "item": "minecraft:diamond_ore"
+    "id": "minecraft:chainmail_chestplate"
   }
 }

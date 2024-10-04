@@ -7,7 +7,7 @@
     }
   ],
   "result": {
-    "item": "nec:java_block"
+    "id": "nec:java_block"
   },
   "show_notification": true
 }

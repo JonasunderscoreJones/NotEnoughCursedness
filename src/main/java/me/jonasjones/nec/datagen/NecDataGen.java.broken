@@ -1,0 +1,79 @@
+package me.jonasjones.nec.datagen;
+
+import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
+import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
+import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
+import net.fabricmc.fabric.api.datagen.v1.provider.FabricAdvancementProvider;
+import net.minecraft.advancement.*;
+
+import java.util.concurrent.CompletableFuture;
+import java.util.function.Consumer;
+import net.minecraft.advancement.criterion.ConsumeItemCriterion;
+import net.minecraft.advancement.criterion.InventoryChangedCriterion;
+import net.minecraft.item.Items;
+import net.minecraft.registry.RegistryWrapper;
+import net.minecraft.text.Text;
+import net.minecraft.util.Identifier;
+
+public class NecDataGen implements DataGeneratorEntrypoint {
+    @Override
+    public void onInitializeDataGenerator(FabricDataGenerator fabricDataGenerator) {
+        FabricDataGenerator.Pack pack = fabricDataGenerator.createPack();
+
+        pack.addProvider(AdvancementsProvider::new);
+    }
+
+    static class AdvancementsProvider extends FabricAdvancementProvider {
+        protected AdvancementsProvider(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> registryLookup) {
+            super(output, registryLookup);
+        }
+
+        @Override
+        public void generateAdvancement(RegistryWrapper.WrapperLookup registryLookup, Consumer<AdvancementEntry> consumer) {
+            AdvancementEntry rootAdvancement = Advancement.Builder.create()
+                    .display(
+                            Items.DIRT, // The display icon
+                            Text.literal("Your First Dirt Block"), // The title
+                            Text.literal("Now make a three by three"), // The description
+                            new Identifier("textures/gui/advancements/backgrounds/adventure.png"), // Background image used
+                            AdvancementFrame.TASK, // Options: TASK, CHALLENGE, GOAL
+                            true, // Show toast top right
+                            true, // Announce to chat
+                            false // Hidden in the advancement tab
+                    )
+                    // The first string used in criterion is the name referenced by other advancements when they want to have 'requirements'
+                    .criterion("got_dirt", InventoryChangedCriterion.Conditions.items(Items.DIRT))
+                    .build(consumer, "your_mod_id_please_change_me" + "/root");
+
+            AdvancementEntry gotOakAdvancement = Advancement.Builder.create().parent(rootAdvancement)
+                    .display(
+                            Items.OAK_LOG,
+                            Text.literal("Your First Log"),
+                            Text.literal("Bare fisted"),
+                            null, // children to parent advancements don't need a background set
+                            AdvancementFrame.TASK,
+                            true,
+                            true,
+                            false
+                    )
+                    .rewards(AdvancementRewards.Builder.experience(1000))
+                    .criterion("got_wood", InventoryChangedCriterion.Conditions.items(Items.OAK_LOG))
+                    .build(consumer, "your_mod_id_please_change_me" + "/got_wood");
+
+            AdvancementEntry eatAppleAdvancement = Advancement.Builder.create().parent(rootAdvancement)
+                    .display(
+                            Items.APPLE,
+                            Text.literal("Apple and Beef"),
+                            Text.literal("Ate an apple and beef"),
+                            null, // children to parent advancements don't need a background set
+                            AdvancementFrame.CHALLENGE,
+                            true,
+                            true,
+                            false
+                    )
+                    .criterion("ate_apple", ConsumeItemCriterion.Conditions.item(Items.APPLE))
+                    .criterion("ate_cooked_beef", ConsumeItemCriterion.Conditions.item(Items.COOKED_BEEF))
+                    .build(consumer, "your_mod_id_please_change_me" + "/ate_apple_and_beef");
+        }
+    }
+}

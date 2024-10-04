@@ -2,14 +2,13 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "nec:letter"
+      "item": "minecraft:bow"
     },
     {
-      "item": "minecraft:chain"
+      "item": "minecraft:iron_ingot"
     }
   ],
   "result": {
-    "item": "nec:chainmail",
-    "count": 1
+    "id": "nec:ak_47"
   }
 }

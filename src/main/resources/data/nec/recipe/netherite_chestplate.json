@@ -15,7 +15,7 @@
     "222"
   ],
   "result": {
-    "item": "minecraft:netherite_chestplate"
+    "id": "minecraft:netherite_chestplate"
   },
   "show_notification": true
 }
