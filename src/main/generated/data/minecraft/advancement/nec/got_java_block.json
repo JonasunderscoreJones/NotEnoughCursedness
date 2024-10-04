@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:nec/got_pocket_block",
+  "criteria": {
+    "got_java_block": {
+      "conditions": {
+        "items": [
+          {
+            "items": "nec:java_block"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.nec.java_block.description"
+    },
+    "hidden": true,
+    "icon": {
+      "count": 1,
+      "id": "nec:java_block"
+    },
+    "title": {
+      "translate": "advancements.nec.java_block.title"
+    }
+  },
+  "requirements": [
+    [
+      "got_java_block"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

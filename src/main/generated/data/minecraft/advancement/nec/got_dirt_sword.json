@@ -1,0 +1,37 @@
+{
+  "parent": "minecraft:nec/root",
+  "criteria": {
+    "got_dirt_sword": {
+      "conditions": {
+        "items": [
+          {
+            "items": "nec:dirt_sword"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.nec.dirt_sword.description"
+    },
+    "hidden": true,
+    "icon": {
+      "count": 1,
+      "id": "nec:dirt_sword"
+    },
+    "title": {
+      "translate": "advancements.nec.dirt_sword.title"
+    }
+  },
+  "requirements": [
+    [
+      "got_dirt_sword"
+    ]
+  ],
+  "rewards": {
+    "experience": 1000
+  },
+  "sends_telemetry_event": true
+}

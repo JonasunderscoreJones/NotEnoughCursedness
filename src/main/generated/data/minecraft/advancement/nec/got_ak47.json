@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:nec/root",
+  "criteria": {
+    "got_ak47": {
+      "conditions": {
+        "items": [
+          {
+            "items": "nec:ak_47"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.nec.ak_47.description"
+    },
+    "hidden": true,
+    "icon": {
+      "count": 1,
+      "id": "nec:ak_47"
+    },
+    "title": {
+      "translate": "advancements.nec.ak_47.title"
+    }
+  },
+  "requirements": [
+    [
+      "got_ak47"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

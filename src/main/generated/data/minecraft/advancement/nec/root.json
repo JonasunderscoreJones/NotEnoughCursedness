@@ -1,0 +1,27 @@
+{
+  "criteria": {
+    "nec_root": {
+      "trigger": "minecraft:tick"
+    }
+  },
+  "display": {
+    "announce_to_chat": false,
+    "description": {
+      "translate": "advancements.nec.root.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "minecraft:dirt"
+    },
+    "show_toast": false,
+    "title": {
+      "translate": "advancements.nec.root.title"
+    }
+  },
+  "requirements": [
+    [
+      "nec_root"
+    ]
+  ],
+  "sends_telemetry_event": true
+}
