@@ -9,14 +9,11 @@ import net.minecraft.advancement.*;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Consumer;
 
-import net.minecraft.advancement.criterion.AbstractCriterion;
-import net.minecraft.advancement.criterion.ConsumeItemCriterion;
 import net.minecraft.advancement.criterion.InventoryChangedCriterion;
 import net.minecraft.advancement.criterion.TickCriterion;
 import net.minecraft.item.Items;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.text.Text;
-import net.minecraft.util.Identifier;
 
 import static me.jonasjones.nec.block.ModBlocks.*;
 import static me.jonasjones.nec.item.ModItems.AK47_ITEM;

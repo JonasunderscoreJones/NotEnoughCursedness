@@ -4,9 +4,7 @@ import me.jonasjones.nec.block.ModBlocks;
 import me.jonasjones.nec.item.ModItems;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
-import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.fabricmc.fabric.api.registry.StrippableBlockRegistry;
-import net.minecraft.item.BlockItem;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.registry.Registries;
@@ -20,27 +18,12 @@ public class ModRegistries {
     public static ItemGroup NEC_GROUP = null;
 
     public static void registerModStuffs() {
-        registerFuels();
-        registerCommands();
-        registerEvents();
         registerStrippables();
         registerFlammableBlock();
         register_itemGroup();
     }
 
-    private static void registerFuels() {
-        FuelRegistry registry = FuelRegistry.INSTANCE;
-
-        //registry.add(ModItems.LILAC_FLOWER_BULB, 200);
-    }
-
-    private static void registerCommands() {
-        //CommandRegistrationCallback.EVENT.register(SetHomeCommand::register);
-        //CommandRegistrationCallback.EVENT.register(ReturnHomeCommand::register);
-    }
-
     private static void registerStrippables() {
-        //StrippableBlockRegistry.register(ModBlocks.GREEEN_BIRCH_LOG_BLOCK, ModBlocks.STRIPPED_JACARANDA_LOG);
         StrippableBlockRegistry.register(ModBlocks.GREEEN_BIRCH_LOG_BLOCK, ModBlocks.GREEEN_BIRCH_LOG_BLOCK);
     }
 
@@ -48,16 +31,6 @@ public class ModRegistries {
         FlammableBlockRegistry instance = FlammableBlockRegistry.getDefaultInstance();
 
         instance.add(ModBlocks.GREEN_BIRCH_LOG, 5, 5);
-    }
-
-    private static void registerEvents() {
-        //ServerPlayerEvents.COPY_FROM.register(new ModPlayerEventCopyFrom());
-    }
-
-    public static void register_item(BlockItem CUSTOM_ITEM) {
-        //ItemGroupEvents.modifyEntriesEvent(ITEM_GROUP).register(content -> {
-        //    content.add(CUSTOM_ITEM);
-        //});
     }
 
     public static void register_itemGroup() {
