@@ -16,8 +16,7 @@ import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.text.Text;
 
 import static me.jonasjones.nec.block.ModBlocks.*;
-import static me.jonasjones.nec.item.ModItems.AK47_ITEM;
-import static me.jonasjones.nec.item.ModItems.DIRT_SWORD_ITEM;
+import static me.jonasjones.nec.item.ModItems.*;
 
 public class NecDataGen implements DataGeneratorEntrypoint {
     @Override
@@ -133,6 +132,20 @@ public class NecDataGen implements DataGeneratorEntrypoint {
                     )
                     .criterion("got_fletching_stairs", InventoryChangedCriterion.Conditions.items(FLETCHING_STAIRS_TIEM))
                     .build(consumer, "nec" + "/got_fletching_stairs");
+
+            AdvancementEntry gotLapisGoldenAppleAdvancement = Advancement.Builder.create().parent(rootAdvancement)
+                    .display(
+                            LAPIS_GOLDEN_APPLE_ITEM,
+                            Text.translatable("advancements.nec.lapis_golden_apple.title"),
+                            Text.translatable("advancements.nec.lapis_golden_apple.description"),
+                            null, // children to parent advancements don't need a background set
+                            AdvancementFrame.TASK,
+                            true,
+                            true,
+                            true
+                    )
+                    .criterion("got_fletching_stairs", InventoryChangedCriterion.Conditions.items(LAPIS_GOLDEN_APPLE_ITEM))
+                    .build(consumer, "nec" + "/got_lapis_golden_apple");
         }
     }
 }
