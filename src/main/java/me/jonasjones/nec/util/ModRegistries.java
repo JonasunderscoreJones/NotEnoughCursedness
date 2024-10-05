@@ -46,6 +46,7 @@ public class ModRegistries {
                     entries.add(new ItemStack(ModBlocks.JAVA_BLOCK));
                     entries.add(new ItemStack(ModBlocks.POCKET_BLOCK));
                     entries.add(new ItemStack(ModBlocks.FLETCHING_STAIRS_BLOCK));
+                    entries.add(new ItemStack(ModBlocks.THICK_END_ROD));
 
                     entries.add(new ItemStack(ModItems.STEEL_ITEM));
                     entries.add(new ItemStack(ModItems.NEGATIVE_FLINT_ITEM));
@@ -55,6 +56,7 @@ public class ModRegistries {
                     entries.add(new ItemStack(ModItems.DIRT_SWORD_ITEM));
                     entries.add(new ItemStack(ModItems.AK47_ITEM));
                     entries.add(new ItemStack(ModItems.HELMET_ON_A_STICK_ITEM));
+                    entries.add(new ItemStack(ModItems.LAPIS_GOLDEN_APPLE_ITEM));
                 }))
                 .build();
 

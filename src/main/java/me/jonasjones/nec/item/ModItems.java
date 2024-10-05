@@ -1,6 +1,9 @@
 package me.jonasjones.nec.item;
 
 import me.jonasjones.nec.item.materials.DirtToolMaterial;
+import net.minecraft.component.type.FoodComponent;
+import net.minecraft.entity.effect.StatusEffectInstance;
+import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.Item;
 import net.minecraft.item.SwordItem;
 import net.minecraft.registry.Registry;
@@ -17,6 +20,7 @@ public class ModItems {
     public static Item CHAINMAIL_ITEM;
     public static Item AK47_ITEM;
     public static Item HELMET_ON_A_STICK_ITEM;
+    public static Item LAPIS_GOLDEN_APPLE_ITEM;
 
     public static void register() {
         SwordItem DIRT_SWORD = new SwordItem(DirtToolMaterial.INSTANCE, new Item.Settings());
@@ -39,5 +43,8 @@ public class ModItems {
 
         Item HELMET_ON_A_STICK = new Item(new Item.Settings());
         HELMET_ON_A_STICK_ITEM = Registry.register(ITEM, Identifier.of(MOD_ID, "helmet_on_a_stick"), HELMET_ON_A_STICK);
+
+        Item LAPIS_GOLDEN_APPLE = new Item(new Item.Settings().food(new FoodComponent.Builder().saturationModifier(0.3f).statusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 200, 1), 1.0f).statusEffect(new StatusEffectInstance(StatusEffects.ABSORPTION, 2400), 1.0f).statusEffect(new StatusEffectInstance(StatusEffects.RESISTANCE, 6000), 1.0f).statusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 6000), 1.0f).statusEffect(new StatusEffectInstance(StatusEffects.ABSORPTION, 2400), 1.0f).statusEffect(new StatusEffectInstance(StatusEffects.SATURATION, 2400), 1.0f).build()));
+        LAPIS_GOLDEN_APPLE_ITEM = Registry.register(ITEM, Identifier.of(MOD_ID, "lapis_golden_apple"), LAPIS_GOLDEN_APPLE);
     }
 }
