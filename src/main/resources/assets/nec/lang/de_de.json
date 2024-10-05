@@ -33,5 +33,7 @@
     "item.nec.letter": "Brief",
     "item.nec.negative_flint": "Negativer Feuerstein",
     "item.nec.steel": "Zeug",
-    "itemGroup.nec.not_enough_cursedness": "Nicht Genug Verfluchtheit"
+    "itemGroup.nec.not_enough_cursedness": "Nicht Genug Verfluchtheit",
+
+    "text.nec.splashscreen": "Not Enough Cursedness"
 }

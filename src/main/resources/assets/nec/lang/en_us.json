@@ -33,5 +33,7 @@
     "item.nec.letter": "Letter",
     "item.nec.negative_flint": "Negative Flint",
     "item.nec.steel": "Steel",
-    "itemGroup.nec.not_enough_cursedness": "Not Enough Cursedness"
+    "itemGroup.nec.not_enough_cursedness": "Not Enough Cursedness",
+
+    "text.nec.splashscreen": "Not Enough Cursedness"
 }

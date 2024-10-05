@@ -27,7 +27,11 @@
     ]
   },
   "mixins": [
-    "nec.mixins.json"
+    "nec.mixins.json",
+    {
+      "config": "nec.client.mixins.json",
+      "environment": "client"
+    }
   ],
 
   "depends": {
