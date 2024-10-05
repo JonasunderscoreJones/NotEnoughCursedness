@@ -37,7 +37,7 @@ public class NecDataGen implements DataGeneratorEntrypoint {
         public void generateAdvancement(RegistryWrapper.WrapperLookup registryLookup, Consumer<AdvancementEntry> consumer) {
             AdvancementEntry rootAdvancement = Advancement.Builder.create()
                     .display(
-                            Items.DIRT, // The display icon
+                            DIRT_SWORD_ITEM, // The display icon
                             Text.translatable("advancements.nec.root.title"), // The title
                             Text.translatable("advancements.nec.root.description"), // The description//new Identifier("textures/gui/advancements/backgrounds/adventure.png","textures/gui/advancements/backgrounds/adventure.png"), // Background image used
                             Identifier.of(MOD_ID, "textures/gui/advancements/backgrounds/nec.png"), // Background image used

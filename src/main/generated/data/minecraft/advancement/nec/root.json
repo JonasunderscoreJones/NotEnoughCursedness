@@ -6,12 +6,13 @@
   },
   "display": {
     "announce_to_chat": false,
+    "background": "nec:textures/gui/advancements/backgrounds/nec.png",
     "description": {
       "translate": "advancements.nec.root.description"
     },
     "icon": {
       "count": 1,
-      "id": "minecraft:dirt"
+      "id": "nec:dirt_sword"
     },
     "show_toast": false,
     "title": {
