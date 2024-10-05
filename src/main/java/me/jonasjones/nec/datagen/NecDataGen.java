@@ -14,7 +14,9 @@ import net.minecraft.advancement.criterion.TickCriterion;
 import net.minecraft.item.Items;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.text.Text;
+import net.minecraft.util.Identifier;
 
+import static me.jonasjones.nec.NotEnoughCursedness.MOD_ID;
 import static me.jonasjones.nec.block.ModBlocks.*;
 import static me.jonasjones.nec.item.ModItems.*;
 
@@ -38,7 +40,7 @@ public class NecDataGen implements DataGeneratorEntrypoint {
                             Items.DIRT, // The display icon
                             Text.translatable("advancements.nec.root.title"), // The title
                             Text.translatable("advancements.nec.root.description"), // The description//new Identifier("textures/gui/advancements/backgrounds/adventure.png","textures/gui/advancements/backgrounds/adventure.png"), // Background image used
-                            null,
+                            Identifier.of(MOD_ID, "textures/gui/advancements/backgrounds/nec.png"), // Background image used
                             AdvancementFrame.TASK, // Options: TASK, CHALLENGE, GOAL
                             false, // Show toast top right
                             false, // Announce to chat
