@@ -1,11 +1,11 @@
 {
-  "parent": "minecraft:nec/got_thicker_end_rod",
+  "parent": "minecraft:nec/tnt_beacon_base",
   "criteria": {
-    "got_even_thicker_end_rod": {
+    "polish_deepslate_beacon_base": {
       "conditions": {
         "items": [
           {
-            "items": "nec:even_thicker_end_rod"
+            "items": "minecraft:polished_deepslate"
           }
         ]
       },
@@ -15,21 +15,20 @@
   "display": {
     "announce_to_chat": false,
     "description": {
-      "translate": "advancements.nec.even_thicker_end_rod.description"
+      "translate": "advancements.nec.polish_deepslate_beacon_base.description"
     },
     "frame": "goal",
     "icon": {
       "count": 1,
-      "id": "nec:even_thicker_end_rod"
+      "id": "minecraft:beacon"
     },
-    "show_toast": false,
     "title": {
-      "translate": "advancements.nec.even_thicker_end_rod.title"
+      "translate": "advancements.nec.polish_deepslate_beacon_base.title"
     }
   },
   "requirements": [
     [
-      "got_even_thicker_end_rod"
+      "polish_deepslate_beacon_base"
     ]
   ],
   "sends_telemetry_event": true

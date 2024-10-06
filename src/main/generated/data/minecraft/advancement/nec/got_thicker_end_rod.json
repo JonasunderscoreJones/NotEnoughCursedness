@@ -13,6 +13,7 @@
     }
   },
   "display": {
+    "announce_to_chat": false,
     "description": {
       "translate": "advancements.nec.thicker_end_rod.description"
     },
@@ -20,6 +21,7 @@
       "count": 1,
       "id": "nec:thicker_end_rod"
     },
+    "show_toast": false,
     "title": {
       "translate": "advancements.nec.thicker_end_rod.title"
     }

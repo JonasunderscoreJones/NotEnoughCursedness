@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:nec/root",
   "criteria": {
-    "got_thick_end_rod": {
+    "tnt_beacon_base": {
       "conditions": {
         "items": [
           {
-            "items": "nec:thick_end_rod"
+            "items": "minecraft:tnt"
           }
         ]
       },
@@ -15,20 +15,19 @@
   "display": {
     "announce_to_chat": false,
     "description": {
-      "translate": "advancements.nec.thick_end_rod.description"
+      "translate": "advancements.nec.tnt_beacon_base.description"
     },
     "icon": {
       "count": 1,
-      "id": "nec:thick_end_rod"
+      "id": "minecraft:beacon"
     },
-    "show_toast": false,
     "title": {
-      "translate": "advancements.nec.thick_end_rod.title"
+      "translate": "advancements.nec.tnt_beacon_base.title"
     }
   },
   "requirements": [
     [
-      "got_thick_end_rod"
+      "tnt_beacon_base"
     ]
   ],
   "sends_telemetry_event": true

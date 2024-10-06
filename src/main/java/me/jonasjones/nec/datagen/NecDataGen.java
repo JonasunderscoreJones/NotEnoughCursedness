@@ -144,8 +144,8 @@ public class NecDataGen implements DataGeneratorEntrypoint {
                             Text.translatable("advancements.nec.thick_end_rod.description"),
                             null, // children to parent advancements don't need a background set
                             AdvancementFrame.TASK,
-                            true,
-                            true,
+                            false,
+                            false,
                             false
                     )
                     .criterion("got_thick_end_rod", InventoryChangedCriterion.Conditions.items(THICK_END_ROD_ITEM))
@@ -158,8 +158,8 @@ public class NecDataGen implements DataGeneratorEntrypoint {
                             Text.translatable("advancements.nec.thicker_end_rod.description"),
                             null, // children to parent advancements don't need a background set
                             AdvancementFrame.TASK,
-                            true,
-                            true,
+                            false,
+                            false,
                             false
                     )
                     .criterion("got_thicker_end_rod", InventoryChangedCriterion.Conditions.items(THICKER_END_ROD_ITEM))
@@ -171,9 +171,9 @@ public class NecDataGen implements DataGeneratorEntrypoint {
                             Text.translatable("advancements.nec.even_thicker_end_rod.title"),
                             Text.translatable("advancements.nec.even_thicker_end_rod.description"),
                             null, // children to parent advancements don't need a background set
-                            AdvancementFrame.TASK,
-                            true,
-                            true,
+                            AdvancementFrame.GOAL,
+                            false,
+                            false,
                             false
                     )
                     .criterion("got_even_thicker_end_rod", InventoryChangedCriterion.Conditions.items(EVEN_THICKER_END_ROD_ITEM))
@@ -201,11 +201,39 @@ public class NecDataGen implements DataGeneratorEntrypoint {
                             null, // children to parent advancements don't need a background set
                             AdvancementFrame.CHALLENGE,
                             true,
-                            true,
+                            false,
                             false
                     )
                     .criterion("use_campfire_as_fuel", InventoryChangedCriterion.Conditions.items(Items.CAMPFIRE))
                     .build(consumer, "nec" + "/use_campfire_as_fuel");
+
+            AdvancementEntry tntBeaconBaseAdvancement = Advancement.Builder.create().parent(rootAdvancement)
+                    .display(
+                            Items.BEACON,
+                            Text.translatable("advancements.nec.tnt_beacon_base.title"),
+                            Text.translatable("advancements.nec.tnt_beacon_base.description"),
+                            null, // children to parent advancements don't need a background set
+                            AdvancementFrame.TASK,
+                            true,
+                            false,
+                            false
+                    )
+                    .criterion("tnt_beacon_base", InventoryChangedCriterion.Conditions.items(Items.TNT))
+                    .build(consumer, "nec" + "/tnt_beacon_base");
+
+            AdvancementEntry polishDeepslateBeaconBaseAdvancement = Advancement.Builder.create().parent(tntBeaconBaseAdvancement)
+                    .display(
+                            Items.BEACON,
+                            Text.translatable("advancements.nec.polish_deepslate_beacon_base.title"),
+                            Text.translatable("advancements.nec.polish_deepslate_beacon_base.description"),
+                            null, // children to parent advancements don't need a background set
+                            AdvancementFrame.GOAL,
+                            true,
+                            false,
+                            false
+                    )
+                    .criterion("polish_deepslate_beacon_base", InventoryChangedCriterion.Conditions.items(Items.POLISHED_DEEPSLATE))
+                    .build(consumer, "nec" + "/polish_deepslate_beacon_base");
         }
     }
 }
