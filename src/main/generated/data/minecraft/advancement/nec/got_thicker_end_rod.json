@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:nec/got_thick_end_rod",
+  "criteria": {
+    "got_thicker_end_rod": {
+      "conditions": {
+        "items": [
+          {
+            "items": "nec:thicker_end_rod"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.nec.thicker_end_rod.description"
+    },
+    "hidden": true,
+    "icon": {
+      "count": 1,
+      "id": "nec:thicker_end_rod"
+    },
+    "title": {
+      "translate": "advancements.nec.thicker_end_rod.title"
+    }
+  },
+  "requirements": [
+    [
+      "got_thicker_end_rod"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

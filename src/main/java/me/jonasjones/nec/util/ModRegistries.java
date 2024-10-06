@@ -47,6 +47,8 @@ public class ModRegistries {
                     entries.add(new ItemStack(ModBlocks.POCKET_BLOCK));
                     entries.add(new ItemStack(ModBlocks.FLETCHING_STAIRS_BLOCK));
                     entries.add(new ItemStack(ModBlocks.THICK_END_ROD));
+                    entries.add(new ItemStack(ModBlocks.THICKER_END_ROD));
+                    entries.add(new ItemStack(ModBlocks.EVEN_THICKER_END_ROD));
 
                     entries.add(new ItemStack(ModItems.STEEL_ITEM));
                     entries.add(new ItemStack(ModItems.NEGATIVE_FLINT_ITEM));
