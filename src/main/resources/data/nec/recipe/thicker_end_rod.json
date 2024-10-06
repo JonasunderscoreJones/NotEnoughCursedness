@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "EEE"
+  ],
+  "key": {
+    "E": {
+      "item": "nec:thick_end_rod"
+    }
+  },
+  "result": {
+    "id": "nec:thicker_end_rod",
+    "count": 2
+  }
+}
