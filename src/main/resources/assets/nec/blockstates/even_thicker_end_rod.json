@@ -1,0 +1,30 @@
+{
+  "variants": {
+    "facing=down": {
+      "model": "nec:block/even_thicker_end_rod",
+      "x": 180
+    },
+    "facing=east": {
+      "model": "nec:block/even_thicker_end_rod",
+      "x": 90,
+      "y": 90
+    },
+    "facing=north": {
+      "model": "nec:block/even_thicker_end_rod",
+      "x": 90
+    },
+    "facing=south": {
+      "model": "nec:block/even_thicker_end_rod",
+      "x": 90,
+      "y": 180
+    },
+    "facing=up": {
+      "model": "nec:block/even_thicker_end_rod"
+    },
+    "facing=west": {
+      "model": "nec:block/even_thicker_end_rod",
+      "x": 90,
+      "y": 270
+    }
+  }
+}

@@ -10,6 +10,8 @@ import java.util.concurrent.CompletableFuture;
 import java.util.function.Consumer;
 
 import net.minecraft.advancement.criterion.InventoryChangedCriterion;
+import net.minecraft.advancement.criterion.RecipeCraftedCriterion;
+import net.minecraft.advancement.criterion.RecipeUnlockedCriterion;
 import net.minecraft.advancement.criterion.TickCriterion;
 import net.minecraft.item.Items;
 import net.minecraft.registry.RegistryWrapper;
@@ -149,6 +151,34 @@ public class NecDataGen implements DataGeneratorEntrypoint {
                     .criterion("got_thick_end_rod", InventoryChangedCriterion.Conditions.items(THICK_END_ROD_ITEM))
                     .build(consumer, "nec" + "/got_thick_end_rod");
 
+            AdvancementEntry gotThickerEndRodAdvancement = Advancement.Builder.create().parent(gotThickEndRodAdvancement)
+                    .display(
+                            THICKER_END_ROD_ITEM,
+                            Text.translatable("advancements.nec.thicker_end_rod.title"),
+                            Text.translatable("advancements.nec.thicker_end_rod.description"),
+                            null, // children to parent advancements don't need a background set
+                            AdvancementFrame.TASK,
+                            true,
+                            true,
+                            true
+                    )
+                    .criterion("got_thicker_end_rod", InventoryChangedCriterion.Conditions.items(THICKER_END_ROD_ITEM))
+                    .build(consumer, "nec" + "/got_thicker_end_rod");
+
+            AdvancementEntry gotEvenThickerEndRodAdvancement = Advancement.Builder.create().parent(gotThickerEndRodAdvancement)
+                    .display(
+                            EVEN_THICKER_END_ROD_ITEM,
+                            Text.translatable("advancements.nec.even_thicker_end_rod.title"),
+                            Text.translatable("advancements.nec.even_thicker_end_rod.description"),
+                            null, // children to parent advancements don't need a background set
+                            AdvancementFrame.TASK,
+                            true,
+                            true,
+                            true
+                    )
+                    .criterion("got_even_thicker_end_rod", InventoryChangedCriterion.Conditions.items(EVEN_THICKER_END_ROD_ITEM))
+                    .build(consumer, "nec" + "/got_even_thicker_end_rod");
+
             AdvancementEntry gotLapisGoldenAppleAdvancement = Advancement.Builder.create().parent(rootAdvancement)
                     .display(
                             LAPIS_GOLDEN_APPLE_ITEM,
@@ -162,6 +192,20 @@ public class NecDataGen implements DataGeneratorEntrypoint {
                     )
                     .criterion("got_lapis_golden_apple", InventoryChangedCriterion.Conditions.items(LAPIS_GOLDEN_APPLE_ITEM))
                     .build(consumer, "nec" + "/got_lapis_golden_apple");
+
+            AdvancementEntry useCampfireAsFuelAdvancement = Advancement.Builder.create().parent(rootAdvancement)
+                    .display(
+                            Items.CAMPFIRE,
+                            Text.translatable("advancements.nec.use_campfire_as_fuel.title"),
+                            Text.translatable("advancements.nec.use_campfire_as_fuel.description"),
+                            null, // children to parent advancements don't need a background set
+                            AdvancementFrame.TASK,
+                            true,
+                            true,
+                            true
+                    )
+                    .criterion("use_campfire_as_fuel", InventoryChangedCriterion.Conditions.items(Items.CAMPFIRE))
+                    .build(consumer, "nec" + "/use_campfire_as_fuel");
         }
     }
 }
