@@ -1,5 +1,6 @@
 package me.jonasjones.nec.block;
 
+import me.jonasjones.nec.block.util.ThickEndRodBlock;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
 import net.minecraft.item.BlockItem;
@@ -19,7 +20,8 @@ public class ModBlocks {
     public static Block DEEPSLATE_DIAMOND_ORE_ORE;
     public static Block JAVA_BLOCK;
     public static Block POCKET_BLOCK;
-    public static Block FLETCHING_STAIRS_BLOCK = null;
+    public static Block FLETCHING_STAIRS_BLOCK;
+    public static Block THICK_END_ROD;
     public static BlockItem GUN_BLOCK_ITEM;
     public static Block GUN_BLOCK_BLOCK;
     public static BlockItem BLAZE_BLOCK_ITEM;
@@ -36,6 +38,8 @@ public class ModBlocks {
     public static Block POCKET_BLOCK_BLOCK;
     public static BlockItem FLETCHING_STAIRS_TIEM;
     public static Block FLETCHING_STAIRS_BLOCK_BLOCK;
+    public static BlockItem THICK_END_ROD_ITEM;
+    public static Block THICK_END_ROD_BLOCK;
 
     public static void register() {
         BLAZE_BLOCK = new Block(FabricBlockSettings.copyOf(Blocks.DIAMOND_BLOCK).strength(5.0F));
@@ -69,5 +73,9 @@ public class ModBlocks {
         FLETCHING_STAIRS_BLOCK = new StairsBlock(GREEEN_BIRCH_LOG_BLOCK.getDefaultState(), FabricBlockSettings.copyOf(Blocks.OAK_STAIRS).strength(1.0F));
         FLETCHING_STAIRS_BLOCK_BLOCK = Registry.register(BLOCK, Identifier.of(MOD_ID, "fletching_stairs"), FLETCHING_STAIRS_BLOCK);
         FLETCHING_STAIRS_TIEM = Registry.register(ITEM, Identifier.of(MOD_ID, "fletching_stairs"), new BlockItem(FLETCHING_STAIRS_BLOCK, new Item.Settings()));
+
+        THICK_END_ROD = new ThickEndRodBlock(FabricBlockSettings.copyOf(Blocks.END_ROD).strength(0.0F));
+        THICK_END_ROD_BLOCK = Registry.register(BLOCK, Identifier.of(MOD_ID, "thick_end_rod"), THICK_END_ROD);
+        THICK_END_ROD_ITEM = Registry.register(ITEM, Identifier.of(MOD_ID, "thick_end_rod"), new BlockItem(THICK_END_ROD, new Item.Settings()));
     }
 }
