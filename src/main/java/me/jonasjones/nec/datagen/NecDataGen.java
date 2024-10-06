@@ -133,6 +133,20 @@ public class NecDataGen implements DataGeneratorEntrypoint {
                     )
                     .criterion("got_fletching_stairs", InventoryChangedCriterion.Conditions.items(FLETCHING_STAIRS_TIEM))
                     .build(consumer, "nec" + "/got_fletching_stairs");
+
+            AdvancementEntry gotThickEndRodAdvancement = Advancement.Builder.create().parent(rootAdvancement)
+                    .display(
+                            THICK_END_ROD_ITEM,
+                            Text.translatable("advancements.nec.thick_end_rod.title"),
+                            Text.translatable("advancements.nec.thick_end_rod.description"),
+                            null, // children to parent advancements don't need a background set
+                            AdvancementFrame.TASK,
+                            true,
+                            true,
+                            true
+                    )
+                    .criterion("got_thick_end_rod", InventoryChangedCriterion.Conditions.items(THICK_END_ROD_ITEM))
+                    .build(consumer, "nec" + "/got_thick_end_rod");
         }
     }
 }
