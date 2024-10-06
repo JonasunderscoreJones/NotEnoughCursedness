@@ -4,9 +4,11 @@ import me.jonasjones.nec.block.ModBlocks;
 import me.jonasjones.nec.item.ModItems;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
+import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.fabricmc.fabric.api.registry.StrippableBlockRegistry;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.text.Text;
@@ -21,6 +23,7 @@ public class ModRegistries {
         registerStrippables();
         registerFlammableBlock();
         register_itemGroup();
+        fuelRegistry();
     }
 
     private static void registerStrippables() {
@@ -31,6 +34,12 @@ public class ModRegistries {
         FlammableBlockRegistry instance = FlammableBlockRegistry.getDefaultInstance();
 
         instance.add(ModBlocks.GREEN_BIRCH_LOG, 5, 5);
+    }
+
+    private static void fuelRegistry() {
+        FuelRegistry.INSTANCE.add(ModBlocks.GREEN_BIRCH_LOG, 300);
+        FuelRegistry.INSTANCE.add(ModBlocks.FLETCHING_STAIRS_BLOCK, 300);
+        FuelRegistry.INSTANCE.add(ModBlocks.BLAZE_BLOCK, 1200);
     }
 
     public static void register_itemGroup() {
