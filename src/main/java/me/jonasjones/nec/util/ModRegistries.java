@@ -40,6 +40,7 @@ public class ModRegistries {
         FuelRegistry.INSTANCE.add(ModBlocks.GREEN_BIRCH_LOG, 300);
         FuelRegistry.INSTANCE.add(ModBlocks.FLETCHING_STAIRS_BLOCK, 300);
         FuelRegistry.INSTANCE.add(ModBlocks.BLAZE_BLOCK, 1200);
+        FuelRegistry.INSTANCE.add(Items.CAMPFIRE, Integer.MAX_VALUE); // very broken thus cursed enough
     }
 
     public static void register_itemGroup() {
