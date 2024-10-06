@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:nec/root",
   "criteria": {
-    "got_fletching_stairs": {
+    "got_lapis_golden_apple": {
       "conditions": {
         "items": [
           {
@@ -27,7 +27,7 @@
   },
   "requirements": [
     [
-      "got_fletching_stairs"
+      "got_lapis_golden_apple"
     ]
   ],
   "sends_telemetry_event": true
