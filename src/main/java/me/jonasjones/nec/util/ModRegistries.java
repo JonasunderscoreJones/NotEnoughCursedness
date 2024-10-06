@@ -46,7 +46,7 @@ public class ModRegistries {
     public static void register_itemGroup() {
         NEC_GROUP = FabricItemGroup.builder()
                 .icon(() -> new ItemStack(ModItems.DIRT_SWORD_ITEM))
-                .displayName(Text.translatable("itemGroup.nec.not_enough_cursedness"))
+                .displayName(Text.translatable("itemgroup.nec.not_enough_cursedness"))
                 .entries(((displayContext, entries) -> {
                     entries.add(new ItemStack(ModBlocks.GREEN_BIRCH_LOG_ITEM));
                     entries.add(new ItemStack(ModBlocks.BLAZE_BLOCK));
