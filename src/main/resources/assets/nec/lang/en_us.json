@@ -16,6 +16,8 @@
     "advancements.nec.root.title": "Not Enough Cursedness",
     "advancements.nec.thick_end_rod.title": "You're thicker than usual!",
     "advancements.nec.thick_end_rod.description": "Obtain a Thick End Rod",
+    "advancements.nec.lapis_golden_apple.title": "Damn You're cheap!",
+    "advancements.nec.lapis_golden_apple.description": "Craft a When You Don't Have Enough Gold So You Use Lapis Instead Golden Apple",
 
     "block.nec.blaze_block": "Blaze Block",
     "block.nec.cursed_dirt_stairs": "Cursed Dirt Stairs",
@@ -36,6 +38,7 @@
     "item.nec.letter": "Letter",
     "item.nec.negative_flint": "Negative Flint",
     "item.nec.steel": "Steel",
+    "item.nec.lapis_golden_apple": "When You Don't Have Enough Gold So You Use Lapis Instead Golden Apple",
     "itemGroup.nec.not_enough_cursedness": "Not Enough Cursedness",
 
     "text.nec.splashscreen": "Not Enough Cursedness"

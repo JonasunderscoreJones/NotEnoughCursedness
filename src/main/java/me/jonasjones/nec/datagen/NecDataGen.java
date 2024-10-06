@@ -14,10 +14,11 @@ import net.minecraft.advancement.criterion.TickCriterion;
 import net.minecraft.item.Items;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.text.Text;
+import net.minecraft.util.Identifier;
 
+import static me.jonasjones.nec.NotEnoughCursedness.MOD_ID;
 import static me.jonasjones.nec.block.ModBlocks.*;
-import static me.jonasjones.nec.item.ModItems.AK47_ITEM;
-import static me.jonasjones.nec.item.ModItems.DIRT_SWORD_ITEM;
+import static me.jonasjones.nec.item.ModItems.*;
 
 public class NecDataGen implements DataGeneratorEntrypoint {
     @Override
@@ -36,10 +37,10 @@ public class NecDataGen implements DataGeneratorEntrypoint {
         public void generateAdvancement(RegistryWrapper.WrapperLookup registryLookup, Consumer<AdvancementEntry> consumer) {
             AdvancementEntry rootAdvancement = Advancement.Builder.create()
                     .display(
-                            Items.DIRT, // The display icon
+                            DIRT_SWORD_ITEM, // The display icon
                             Text.translatable("advancements.nec.root.title"), // The title
                             Text.translatable("advancements.nec.root.description"), // The description//new Identifier("textures/gui/advancements/backgrounds/adventure.png","textures/gui/advancements/backgrounds/adventure.png"), // Background image used
-                            null,
+                            Identifier.of(MOD_ID, "textures/gui/advancements/backgrounds/nec.png"), // Background image used
                             AdvancementFrame.TASK, // Options: TASK, CHALLENGE, GOAL
                             false, // Show toast top right
                             false, // Announce to chat
@@ -147,6 +148,20 @@ public class NecDataGen implements DataGeneratorEntrypoint {
                     )
                     .criterion("got_thick_end_rod", InventoryChangedCriterion.Conditions.items(THICK_END_ROD_ITEM))
                     .build(consumer, "nec" + "/got_thick_end_rod");
+
+            AdvancementEntry gotLapisGoldenAppleAdvancement = Advancement.Builder.create().parent(rootAdvancement)
+                    .display(
+                            LAPIS_GOLDEN_APPLE_ITEM,
+                            Text.translatable("advancements.nec.lapis_golden_apple.title"),
+                            Text.translatable("advancements.nec.lapis_golden_apple.description"),
+                            null, // children to parent advancements don't need a background set
+                            AdvancementFrame.TASK,
+                            true,
+                            true,
+                            true
+                    )
+                    .criterion("got_lapis_golden_apple", InventoryChangedCriterion.Conditions.items(LAPIS_GOLDEN_APPLE_ITEM))
+                    .build(consumer, "nec" + "/got_lapis_golden_apple");
         }
     }
 }

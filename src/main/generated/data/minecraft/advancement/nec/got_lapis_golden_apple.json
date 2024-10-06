@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:nec/root",
+  "criteria": {
+    "got_fletching_stairs": {
+      "conditions": {
+        "items": [
+          {
+            "items": "nec:lapis_golden_apple"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.nec.lapis_golden_apple.description"
+    },
+    "hidden": true,
+    "icon": {
+      "count": 1,
+      "id": "nec:lapis_golden_apple"
+    },
+    "title": {
+      "translate": "advancements.nec.lapis_golden_apple.title"
+    }
+  },
+  "requirements": [
+    [
+      "got_fletching_stairs"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

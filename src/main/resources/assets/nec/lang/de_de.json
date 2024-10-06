@@ -16,6 +16,8 @@
     "advancements.nec.root.title": "Not Enough Cursedness",
     "advancements.nec.thick_end_rod.title": "Du bist dicker als sonst!",
     "advancements.nec.thick_end_rod.description": "Bekomme einen dicken Endstab",
+    "advancements.nec.lapis_golden_apple.title": "Verdammt, du bist geizig!",
+    "advancements.nec.lapis_golden_apple.description": "Crafte einen Wenn du nicht genug Gold hast, also benutzt du Lapis stattdessen Goldener Apfel",
 
     "block.nec.blaze_block": "Lohenblock",
     "block.nec.cursed_dirt_stairs": "Verfluchte Erdtreppe",
@@ -36,6 +38,7 @@
     "item.nec.letter": "Brief",
     "item.nec.negative_flint": "Negativer Feuerstein",
     "item.nec.steel": "Zeug",
+    "item.nec.lapis_golden_apple": "Wenn du nicht genug Gold hast, also benutzt du Lapis stattdessen Goldener Apfel",
     "itemGroup.nec.not_enough_cursedness": "Nicht Genug Verfluchtheit",
 
     "text.nec.splashscreen": "Not Enough Cursedness"
