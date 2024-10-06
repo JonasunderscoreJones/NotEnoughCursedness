@@ -61,7 +61,7 @@ public class NecDataGen implements DataGeneratorEntrypoint {
                             AdvancementFrame.TASK,
                             true,
                             true,
-                            true
+                            false
                     )
                     .rewards(AdvancementRewards.Builder.experience(1000))
                     .criterion("got_dirt_sword", InventoryChangedCriterion.Conditions.items(DIRT_SWORD_ITEM))
@@ -76,7 +76,7 @@ public class NecDataGen implements DataGeneratorEntrypoint {
                             AdvancementFrame.TASK,
                             true,
                             true,
-                            true
+                            false
                     )
                     .criterion("got_ak47", InventoryChangedCriterion.Conditions.items(AK47_ITEM))
                     .build(consumer, "nec" + "/got_ak47");
@@ -90,7 +90,7 @@ public class NecDataGen implements DataGeneratorEntrypoint {
                             AdvancementFrame.TASK,
                             true,
                             true,
-                            true
+                            false
                     )
                     .criterion("got_pocket_block", InventoryChangedCriterion.Conditions.items(POCKET_BLOCK_ITEM))
                     .build(consumer, "nec" + "/got_pocket_block");
@@ -104,7 +104,7 @@ public class NecDataGen implements DataGeneratorEntrypoint {
                             AdvancementFrame.TASK,
                             true,
                             true,
-                            true
+                            false
                     )
                     .criterion("got_java_block", InventoryChangedCriterion.Conditions.items(JAVA_BLOCK))
                     .build(consumer, "nec" + "/got_java_block");
@@ -132,7 +132,7 @@ public class NecDataGen implements DataGeneratorEntrypoint {
                             AdvancementFrame.TASK,
                             true,
                             true,
-                            true
+                            false
                     )
                     .criterion("got_fletching_stairs", InventoryChangedCriterion.Conditions.items(FLETCHING_STAIRS_TIEM))
                     .build(consumer, "nec" + "/got_fletching_stairs");
@@ -146,7 +146,7 @@ public class NecDataGen implements DataGeneratorEntrypoint {
                             AdvancementFrame.TASK,
                             true,
                             true,
-                            true
+                            false
                     )
                     .criterion("got_thick_end_rod", InventoryChangedCriterion.Conditions.items(THICK_END_ROD_ITEM))
                     .build(consumer, "nec" + "/got_thick_end_rod");
@@ -160,7 +160,7 @@ public class NecDataGen implements DataGeneratorEntrypoint {
                             AdvancementFrame.TASK,
                             true,
                             true,
-                            true
+                            false
                     )
                     .criterion("got_thicker_end_rod", InventoryChangedCriterion.Conditions.items(THICKER_END_ROD_ITEM))
                     .build(consumer, "nec" + "/got_thicker_end_rod");
@@ -174,7 +174,7 @@ public class NecDataGen implements DataGeneratorEntrypoint {
                             AdvancementFrame.TASK,
                             true,
                             true,
-                            true
+                            false
                     )
                     .criterion("got_even_thicker_end_rod", InventoryChangedCriterion.Conditions.items(EVEN_THICKER_END_ROD_ITEM))
                     .build(consumer, "nec" + "/got_even_thicker_end_rod");
@@ -188,7 +188,7 @@ public class NecDataGen implements DataGeneratorEntrypoint {
                             AdvancementFrame.TASK,
                             true,
                             true,
-                            true
+                            false
                     )
                     .criterion("got_lapis_golden_apple", InventoryChangedCriterion.Conditions.items(LAPIS_GOLDEN_APPLE_ITEM))
                     .build(consumer, "nec" + "/got_lapis_golden_apple");
@@ -199,10 +199,10 @@ public class NecDataGen implements DataGeneratorEntrypoint {
                             Text.translatable("advancements.nec.use_campfire_as_fuel.title"),
                             Text.translatable("advancements.nec.use_campfire_as_fuel.description"),
                             null, // children to parent advancements don't need a background set
-                            AdvancementFrame.TASK,
+                            AdvancementFrame.CHALLENGE,
                             true,
                             true,
-                            true
+                            false
                     )
                     .criterion("use_campfire_as_fuel", InventoryChangedCriterion.Conditions.items(Items.CAMPFIRE))
                     .build(consumer, "nec" + "/use_campfire_as_fuel");

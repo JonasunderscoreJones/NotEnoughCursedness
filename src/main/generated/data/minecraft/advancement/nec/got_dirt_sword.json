@@ -16,7 +16,6 @@
     "description": {
       "translate": "advancements.nec.dirt_sword.description"
     },
-    "hidden": true,
     "icon": {
       "count": 1,
       "id": "nec:dirt_sword"

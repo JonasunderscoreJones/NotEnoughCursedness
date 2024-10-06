@@ -16,7 +16,6 @@
     "description": {
       "translate": "advancements.nec.pocket_block.description"
     },
-    "hidden": true,
     "icon": {
       "count": 1,
       "id": "nec:pocket_block"

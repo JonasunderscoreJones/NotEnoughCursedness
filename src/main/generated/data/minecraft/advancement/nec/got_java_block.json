@@ -16,7 +16,6 @@
     "description": {
       "translate": "advancements.nec.java_block.description"
     },
-    "hidden": true,
     "icon": {
       "count": 1,
       "id": "nec:java_block"

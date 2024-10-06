@@ -16,7 +16,6 @@
     "description": {
       "translate": "advancements.nec.fletching_stairs.description"
     },
-    "hidden": true,
     "icon": {
       "count": 1,
       "id": "nec:fletching_stairs"

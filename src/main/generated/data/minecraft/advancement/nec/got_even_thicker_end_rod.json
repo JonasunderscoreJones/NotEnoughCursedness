@@ -16,7 +16,6 @@
     "description": {
       "translate": "advancements.nec.even_thicker_end_rod.description"
     },
-    "hidden": true,
     "icon": {
       "count": 1,
       "id": "nec:even_thicker_end_rod"

@@ -16,7 +16,6 @@
     "description": {
       "translate": "advancements.nec.ak_47.description"
     },
-    "hidden": true,
     "icon": {
       "count": 1,
       "id": "nec:ak_47"

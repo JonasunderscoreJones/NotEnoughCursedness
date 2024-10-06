@@ -16,7 +16,6 @@
     "description": {
       "translate": "advancements.nec.lapis_golden_apple.description"
     },
-    "hidden": true,
     "icon": {
       "count": 1,
       "id": "nec:lapis_golden_apple"
