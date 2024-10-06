@@ -22,6 +22,8 @@
     "advancements.nec.even_thicker_end_rod.description": "Bekomme einen Noch Dickeren Endstab",
     "advancements.nec.lapis_golden_apple.title": "Verdammt, du bist geizig!",
     "advancements.nec.lapis_golden_apple.description": "Crafte einen Wenn du nicht genug Gold hast, also benutzt du Lapis stattdessen Goldener Apfel",
+    "advancements.nec.use_campfire_as_fuel.title": "Die Lösung für alle Energieprobleme gefunden!",
+    "advancements.nec.use_campfire_as_fuel.description": "Benutze ein Lagerfeuer als Brennstoff",
 
     "block.nec.blaze_block": "Lohenblock",
     "block.nec.cursed_dirt_stairs": "Verfluchte Erdtreppe",
@@ -35,6 +37,8 @@
     "block.nec.java_block": "Javablock",
     "block.nec.pocket_block": "Pocketblock",
     "block.nec.thick_end_rod": "Dicker Endstab",
+    "block.nec.thicker_end_rod": "Dickerer Endstab",
+    "block.nec.even_thicker_end_rod": "Noch Dickerer Endstab",
     "item.nec.ak_47": "AK-47",
     "item.nec.chainmail": "Kettenbrief",
     "item.nec.dirt_sword": "Erdschwert",

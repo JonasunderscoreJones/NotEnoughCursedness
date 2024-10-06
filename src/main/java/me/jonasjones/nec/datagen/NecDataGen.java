@@ -10,6 +10,8 @@ import java.util.concurrent.CompletableFuture;
 import java.util.function.Consumer;
 
 import net.minecraft.advancement.criterion.InventoryChangedCriterion;
+import net.minecraft.advancement.criterion.RecipeCraftedCriterion;
+import net.minecraft.advancement.criterion.RecipeUnlockedCriterion;
 import net.minecraft.advancement.criterion.TickCriterion;
 import net.minecraft.item.Items;
 import net.minecraft.registry.RegistryWrapper;
@@ -190,6 +192,20 @@ public class NecDataGen implements DataGeneratorEntrypoint {
                     )
                     .criterion("got_lapis_golden_apple", InventoryChangedCriterion.Conditions.items(LAPIS_GOLDEN_APPLE_ITEM))
                     .build(consumer, "nec" + "/got_lapis_golden_apple");
+
+            AdvancementEntry useCampfireAsFuelAdvancement = Advancement.Builder.create().parent(rootAdvancement)
+                    .display(
+                            Items.CAMPFIRE,
+                            Text.translatable("advancements.nec.use_campfire_as_fuel.title"),
+                            Text.translatable("advancements.nec.use_campfire_as_fuel.description"),
+                            null, // children to parent advancements don't need a background set
+                            AdvancementFrame.TASK,
+                            true,
+                            true,
+                            true
+                    )
+                    .criterion("use_campfire_as_fuel", InventoryChangedCriterion.Conditions.items(Items.CAMPFIRE))
+                    .build(consumer, "nec" + "/use_campfire_as_fuel");
         }
     }
 }
