@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:nec/root",
   "criteria": {
-    "got_lapis_golden_apple": {
+    "got_thick_end_rod": {
       "conditions": {
         "items": [
           {
-            "items": "nec:lapis_golden_apple"
+            "items": "nec:thick_end_rod"
           }
         ]
       },
@@ -14,20 +14,20 @@
   },
   "display": {
     "description": {
-      "translate": "advancements.nec.lapis_golden_apple.description"
+      "translate": "advancements.nec.thick_end_rod.description"
     },
     "hidden": true,
     "icon": {
       "count": 1,
-      "id": "nec:lapis_golden_apple"
+      "id": "nec:thick_end_rod"
     },
     "title": {
-      "translate": "advancements.nec.lapis_golden_apple.title"
+      "translate": "advancements.nec.thick_end_rod.title"
     }
   },
   "requirements": [
     [
-      "got_lapis_golden_apple"
+      "got_thick_end_rod"
     ]
   ],
   "sends_telemetry_event": true

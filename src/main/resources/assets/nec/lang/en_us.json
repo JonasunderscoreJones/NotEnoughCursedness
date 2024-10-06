@@ -14,6 +14,8 @@
     "advancements.nec.java_block.title": "You Idiot, this is wrong!",
     "advancements.nec.root.description": "What? You thought that I would give you a look at the achievements?",
     "advancements.nec.root.title": "Not Enough Cursedness",
+    "advancements.nec.thick_end_rod.title": "You're thicker than usual!",
+    "advancements.nec.thick_end_rod.description": "Obtain a Thick End Rod",
     "advancements.nec.lapis_golden_apple.title": "Damn You're cheap!",
     "advancements.nec.lapis_golden_apple.description": "Craft a When You Don't Have Enough Gold So You Use Lapis Instead Golden Apple",
 
@@ -28,6 +30,7 @@
     "block.nec.gun_block": "Gun Block",
     "block.nec.java_block": "Java Block",
     "block.nec.pocket_block": "Pocket Block",
+    "block.nec.thick_end_rod": "Thick End Rod",
     "item.nec.ak_47": "AK-47",
     "item.nec.chainmail": "Chainmail",
     "item.nec.dirt_sword": "Dirt Sword",

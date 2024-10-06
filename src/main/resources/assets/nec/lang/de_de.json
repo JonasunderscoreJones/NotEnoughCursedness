@@ -14,6 +14,8 @@
     "advancements.nec.java_block.title": "Du Depp, das ist falsch!",
     "advancements.nec.root.description": "Was? Du dachtest, dass ich dir einen Blick auf die Fortschritte geben würde?",
     "advancements.nec.root.title": "Not Enough Cursedness",
+    "advancements.nec.thick_end_rod.title": "Du bist dicker als sonst!",
+    "advancements.nec.thick_end_rod.description": "Bekomme einen dicken Endstab",
     "advancements.nec.lapis_golden_apple.title": "Verdammt, du bist geizig!",
     "advancements.nec.lapis_golden_apple.description": "Crafte einen Wenn du nicht genug Gold hast, also benutzt du Lapis stattdessen Goldener Apfel",
 
@@ -28,6 +30,7 @@
     "block.nec.gun_block": "Schießblock",
     "block.nec.java_block": "Javablock",
     "block.nec.pocket_block": "Pocketblock",
+    "block.nec.thick_end_rod": "Dicker Endstab",
     "item.nec.ak_47": "AK-47",
     "item.nec.chainmail": "Kettenbrief",
     "item.nec.dirt_sword": "Erdschwert",
