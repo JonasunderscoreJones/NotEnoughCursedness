@@ -21,6 +21,7 @@ public class ModItems {
     public static Item AK47_ITEM;
     public static Item HELMET_ON_A_STICK_ITEM;
     public static Item LAPIS_GOLDEN_APPLE_ITEM;
+    public static Item DISENCHANTED_NETHER_STAR_ITEM;
 
     public static void register() {
         DIRT_SWORD_ITEM = (SwordItem) registerItem(
@@ -71,6 +72,11 @@ public class ModItems {
                         .alwaysEdible()
                         .build())
                 )
+        );
+
+        DISENCHANTED_NETHER_STAR_ITEM = registerItem(
+                "disenchanted_nether_star",
+                new Item(new Item.Settings())
         );
     }
 

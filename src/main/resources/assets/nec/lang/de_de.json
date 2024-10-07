@@ -46,10 +46,12 @@
     "item.nec.ak_47": "AK-47",
     "item.nec.chainmail": "Kettenbrief",
     "item.nec.dirt_sword": "Erdschwert",
+    "item.nec.disenchanted_nether_star": "Entzauberter Netherstern",
     "item.nec.helmet_on_a_stick": "Helm auf einem Stock",
     "item.nec.lapis_golden_apple": "Wenn du nicht genug Gold hast, also benutzt du Lapis stattdessen Goldener Apfel",
     "item.nec.letter": "Brief",
     "item.nec.negative_flint": "Negativer Feuerstein",
     "item.nec.steel": "Zeug",
-    "text.nec.splashscreen": "Not Enough Cursedness"
+    "text.nec.splashscreen": "Not Enough Cursedness",
+    "item.nec.disenchanted_nether_star": "Disenchanted Nether Star"
 }
