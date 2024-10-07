@@ -68,6 +68,7 @@ public class ModItems {
                         .statusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 6000), 1.0f)
                         .statusEffect(new StatusEffectInstance(StatusEffects.ABSORPTION, 2400), 1.0f)
                         .statusEffect(new StatusEffectInstance(StatusEffects.SATURATION, 2400), 1.0f)
+                        .alwaysEdible()
                         .build())
                 )
         );
