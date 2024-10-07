@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "nec:even_thicker_end_rod"
+    }
+  ],
+  "result": {
+    "id": "nec:thicker_end_rod"
+  }
+}
