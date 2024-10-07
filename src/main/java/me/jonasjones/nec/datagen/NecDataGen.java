@@ -10,8 +10,6 @@ import java.util.concurrent.CompletableFuture;
 import java.util.function.Consumer;
 
 import net.minecraft.advancement.criterion.InventoryChangedCriterion;
-import net.minecraft.advancement.criterion.RecipeCraftedCriterion;
-import net.minecraft.advancement.criterion.RecipeUnlockedCriterion;
 import net.minecraft.advancement.criterion.TickCriterion;
 import net.minecraft.item.Items;
 import net.minecraft.registry.RegistryWrapper;
@@ -19,8 +17,8 @@ import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
 import static me.jonasjones.nec.NotEnoughCursedness.MOD_ID;
-import static me.jonasjones.nec.block.ModBlocks.*;
-import static me.jonasjones.nec.item.ModItems.*;
+import static me.jonasjones.nec.registry.ModBlocks.*;
+import static me.jonasjones.nec.registry.ModItems.*;
 
 public class NecDataGen implements DataGeneratorEntrypoint {
     @Override
@@ -83,7 +81,7 @@ public class NecDataGen implements DataGeneratorEntrypoint {
 
             AdvancementEntry gotPocketBlockAdvancement = Advancement.Builder.create().parent(rootAdvancement)
                     .display(
-                            POCKET_BLOCK_ITEM,
+                            POCKET_BLOCK.blockItem,
                             Text.translatable("advancements.nec.pocket_block.title"),
                             Text.translatable("advancements.nec.pocket_block.description"),
                             null, // children to parent advancements don't need a background set
@@ -92,12 +90,12 @@ public class NecDataGen implements DataGeneratorEntrypoint {
                             true,
                             false
                     )
-                    .criterion("got_pocket_block", InventoryChangedCriterion.Conditions.items(POCKET_BLOCK_ITEM))
+                    .criterion("got_pocket_block", InventoryChangedCriterion.Conditions.items(POCKET_BLOCK.blockItem))
                     .build(consumer, "nec" + "/got_pocket_block");
 
             AdvancementEntry gotJavaBlockAdvancement = Advancement.Builder.create().parent(gotPocketBlockAdvancement)
                     .display(
-                            JAVA_BLOCK,
+                            JAVA_BLOCK.blockItem,
                             Text.translatable("advancements.nec.java_block.title"),
                             Text.translatable("advancements.nec.java_block.description"),
                             null, // children to parent advancements don't need a background set
@@ -106,7 +104,7 @@ public class NecDataGen implements DataGeneratorEntrypoint {
                             true,
                             false
                     )
-                    .criterion("got_java_block", InventoryChangedCriterion.Conditions.items(JAVA_BLOCK))
+                    .criterion("got_java_block", InventoryChangedCriterion.Conditions.items(JAVA_BLOCK.blockItem))
                     .build(consumer, "nec" + "/got_java_block");
 
             AdvancementEntry gotBedrockAdvancement = Advancement.Builder.create().parent(gotJavaBlockAdvancement)
@@ -125,7 +123,7 @@ public class NecDataGen implements DataGeneratorEntrypoint {
 
             AdvancementEntry gotFletchingStairsAdvancement = Advancement.Builder.create().parent(rootAdvancement)
                     .display(
-                            FLETCHING_STAIRS_TIEM,
+                            FLETCHING_STAIRS_BLOCK.blockItem,
                             Text.translatable("advancements.nec.fletching_stairs.title"),
                             Text.translatable("advancements.nec.fletching_stairs.description"),
                             null, // children to parent advancements don't need a background set
@@ -134,12 +132,12 @@ public class NecDataGen implements DataGeneratorEntrypoint {
                             true,
                             false
                     )
-                    .criterion("got_fletching_stairs", InventoryChangedCriterion.Conditions.items(FLETCHING_STAIRS_TIEM))
+                    .criterion("got_fletching_stairs", InventoryChangedCriterion.Conditions.items(FLETCHING_STAIRS_BLOCK.blockItem))
                     .build(consumer, "nec" + "/got_fletching_stairs");
 
             AdvancementEntry gotThickEndRodAdvancement = Advancement.Builder.create().parent(rootAdvancement)
                     .display(
-                            THICK_END_ROD_ITEM,
+                            THICK_END_ROD.blockItem,
                             Text.translatable("advancements.nec.thick_end_rod.title"),
                             Text.translatable("advancements.nec.thick_end_rod.description"),
                             null, // children to parent advancements don't need a background set
@@ -148,12 +146,12 @@ public class NecDataGen implements DataGeneratorEntrypoint {
                             false,
                             false
                     )
-                    .criterion("got_thick_end_rod", InventoryChangedCriterion.Conditions.items(THICK_END_ROD_ITEM))
+                    .criterion("got_thick_end_rod", InventoryChangedCriterion.Conditions.items(THICK_END_ROD.blockItem))
                     .build(consumer, "nec" + "/got_thick_end_rod");
 
             AdvancementEntry gotThickerEndRodAdvancement = Advancement.Builder.create().parent(gotThickEndRodAdvancement)
                     .display(
-                            THICKER_END_ROD_ITEM,
+                            THICKER_END_ROD.blockItem,
                             Text.translatable("advancements.nec.thicker_end_rod.title"),
                             Text.translatable("advancements.nec.thicker_end_rod.description"),
                             null, // children to parent advancements don't need a background set
@@ -162,12 +160,12 @@ public class NecDataGen implements DataGeneratorEntrypoint {
                             false,
                             false
                     )
-                    .criterion("got_thicker_end_rod", InventoryChangedCriterion.Conditions.items(THICKER_END_ROD_ITEM))
+                    .criterion("got_thicker_end_rod", InventoryChangedCriterion.Conditions.items(THICKER_END_ROD.blockItem))
                     .build(consumer, "nec" + "/got_thicker_end_rod");
 
             AdvancementEntry gotEvenThickerEndRodAdvancement = Advancement.Builder.create().parent(gotThickerEndRodAdvancement)
                     .display(
-                            EVEN_THICKER_END_ROD_ITEM,
+                            EVEN_THICKER_END_ROD.blockItem,
                             Text.translatable("advancements.nec.even_thicker_end_rod.title"),
                             Text.translatable("advancements.nec.even_thicker_end_rod.description"),
                             null, // children to parent advancements don't need a background set
@@ -176,7 +174,7 @@ public class NecDataGen implements DataGeneratorEntrypoint {
                             false,
                             false
                     )
-                    .criterion("got_even_thicker_end_rod", InventoryChangedCriterion.Conditions.items(EVEN_THICKER_END_ROD_ITEM))
+                    .criterion("got_even_thicker_end_rod", InventoryChangedCriterion.Conditions.items(EVEN_THICKER_END_ROD.blockItem))
                     .build(consumer, "nec" + "/got_even_thicker_end_rod");
 
             AdvancementEntry gotLapisGoldenAppleAdvancement = Advancement.Builder.create().parent(rootAdvancement)

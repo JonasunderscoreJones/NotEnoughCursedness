@@ -1,11 +1,9 @@
 package me.jonasjones.nec;
 
-import me.jonasjones.nec.block.ModBlocks;
-import me.jonasjones.nec.item.ModItems;
-import me.jonasjones.nec.util.ModRegistries;
+import me.jonasjones.nec.registry.ModBlocks;
+import me.jonasjones.nec.registry.ModItems;
+import me.jonasjones.nec.registry.ModRegistries;
 import net.fabricmc.api.ModInitializer;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 public class NotEnoughCursedness implements ModInitializer {
 	// This logger is used to write text to the console and the log file.
@@ -17,8 +15,6 @@ public class NotEnoughCursedness implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		ModBlocks.register();
-		ModItems.register();
 		ModRegistries.registerModStuffs();
 	}
 }

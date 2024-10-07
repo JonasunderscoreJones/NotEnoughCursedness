@@ -1,4 +1,4 @@
-package me.jonasjones.nec.block.util;
+package me.jonasjones.nec.block;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
