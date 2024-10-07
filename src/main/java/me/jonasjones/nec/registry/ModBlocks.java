@@ -99,6 +99,10 @@ public class ModBlocks {
         );
 
         END_ROD_BLOCK = registerBlock(
+                "end_rod_block",
+                new RodBlock(FabricBlockSettings.copyOf(Blocks.BONE_BLOCK).strength(1.0F))
+        );
+    }
 
     public static BlockWithItem registerBlock(String name, Block block) {
         Identifier id = Identifier.of(MOD_ID, name);
